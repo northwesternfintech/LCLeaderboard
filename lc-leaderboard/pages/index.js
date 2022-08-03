@@ -1,9 +1,19 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
+import { ApolloClient, InMemoryCache, gql } from '@apollo/client';
 
-export default function Home({leetcodes}) {
-  console.log('leetcodes', leetcodes);
+function getKeyByValue(object, value) {
+  return Object.keys(object).find(key => object[key] === value);
+}
+
+export default function Home({leaderboard, array}) {
+  array.sort(function(a,b){return a - b})
+  array.reverse()
+  console.log(leaderboard)
+  console.log("Winner! " + getKeyByValue(leaderboard, array[0]) + " Complete: " + array[0]);
+  console.log("Second place! " + getKeyByValue(leaderboard, array[1]));
+
   return (
     <div className={styles.container}>
       <Head>
@@ -69,10 +79,114 @@ export default function Home({leetcodes}) {
   )
 }
 
-export async function getStaticProps() {
+
+
+export async function getStaticProps({}) {
+  const client = new ApolloClient({
+    uri: 'https://leetcode.com/graphql',
+    cache: new InMemoryCache()
+  });
+
+//   const q = gql `query Profile($Username : v) { 
+//     matchedUser(username: $Username ) {
+//       username
+//       submitStats: submitStatsGlobal {
+//         acSubmissionNum {
+//                 difficulty
+//                 count
+//                 submissions
+//         }
+//       }
+//     }
+//   }
+// `
+
+const q = [gql`
+query Profile { 
+  matchedUser(username: "echavemann") {
+    username
+    submitStats: submitStatsGlobal {
+      acSubmissionNum {
+              difficulty
+              count
+              submissions
+      }
+    }
+  }
+}
+`, gql`
+query Profile { 
+  matchedUser(username: "jasonlu2025") {
+    username
+    submitStats: submitStatsGlobal {
+      acSubmissionNum {
+              difficulty
+              count
+              submissions
+      }
+    }
+  }
+}
+`, gql`
+query Profile { 
+  matchedUser(username: "davidpark2025") {
+    username
+    submitStats: submitStatsGlobal {
+      acSubmissionNum {
+              difficulty
+              count
+              submissions
+      }
+    }
+  }
+}
+`, gql`
+query Profile { 
+  matchedUser(username: "aidanvillasenor") {
+    username
+    submitStats: submitStatsGlobal {
+      acSubmissionNum {
+              difficulty
+              count
+              submissions
+      }
+    }
+  }
+}
+`, gql`
+query Profile { 
+  matchedUser(username: "richard-bann") {
+    username
+    submitStats: submitStatsGlobal {
+      acSubmissionNum {
+              difficulty
+              count
+              submissions
+      }
+    }
+  }
+}
+`]
+
+let dict = {"echavemann" : 0, "jasonlu2025" : 0, "richard-bann" : 0, "davidpark2025" : 0, "aidanvillasenor" : 0};
+let arr = []
+
+  for(let i = 0; i<q.length; i++)
+  {
+    let { data } = await client.query({
+      query: q[i]
+    });
+    dict[data.matchedUser.username] = data.matchedUser.submitStats.acSubmissionNum[0].count;
+    arr[i] = data.matchedUser.submitStats.acSubmissionNum[0].count;
+  }
+
+ 
+  
+
   return {
     props: {
-      leetcodes : []
+      leaderboard : dict,
+      array : arr
     }
   }
 }
