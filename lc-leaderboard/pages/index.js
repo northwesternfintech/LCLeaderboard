@@ -4,7 +4,8 @@ import styles from '../styles/Home.module.css'
 import react from 'react';
 import { ApolloClient, InMemoryCache, gql } from '@apollo/client';
 import { SpeakerphoneIcon, XIcon } from '@heroicons/react/outline'
-import { AnnotationIcon, StarIcon, LightningBoltIcon, PlusIcon} from '@heroicons/react/outline'
+import { QuestionMarkCircleIcon, FireIcon, FastForwardIcon, BanIcon, StarIcon, LightningBoltIcon, PlusIcon} from '@heroicons/react/outline'
+import { data } from 'autoprefixer';
 
 
 function getKeyByValue(object, value) {
@@ -14,15 +15,12 @@ function getKeyByValue(object, value) {
 
 
 
-export default function Home({leaderboard, array, easies}) {
+export default function Home({leaderboard, array, easies, meds, hards}) {
   array.sort(function(a,b){return a - b})
   array.reverse()
-  console.log(leaderboard)
-  console.log("Winner! " + getKeyByValue(leaderboard, array[0]) + " Complete: " + array[0]);
-  console.log("Second place! " + getKeyByValue(leaderboard, array[1]));
-  console.log(easies)
 
-  let winner = getKeyByValue(leaderboard, array[0]);
+
+  console.log(meds)
 
   const ranks = [
     {
@@ -30,63 +28,77 @@ export default function Home({leaderboard, array, easies}) {
       name: getKeyByValue(leaderboard, array[0]),
       description:
         'GrindLord',
-      link:"https://leetcode.com/" + getKeyByValue(leaderboard, array[0]),
       count : array[0],
-      icon: StarIcon,
+      easies : easies[getKeyByValue(leaderboard, array[0])],
+      meds : meds[getKeyByValue(leaderboard, array[0])],
+      hards : hards[getKeyByValue(leaderboard, array[0])],
+      icon: FireIcon,
     },
     {
       place: "#2",
       name: getKeyByValue(leaderboard, array[1]),
       description:
         'Up and coming',
-      link:"https://leetcode.com/" + getKeyByValue(leaderboard, array[1]),
       count : array[1],
-      icon: LightningBoltIcon,
+      easies : easies[getKeyByValue(leaderboard, array[1])],
+      meds : meds[getKeyByValue(leaderboard, array[1])],
+      hards : hards[getKeyByValue(leaderboard, array[1])],
+      icon: StarIcon,
     },
     {
       place: "#3",
       name: getKeyByValue(leaderboard, array[2]),
       description:
         'Not Bad',
-      link:"https://leetcode.com/" + getKeyByValue(leaderboard, array[2]),
       count : array[2],
-      icon: PlusIcon,
+      easies : easies[getKeyByValue(leaderboard, array[2])],
+      meds : meds[getKeyByValue(leaderboard, array[2])],
+      hards : hards[getKeyByValue(leaderboard, array[2])],
+      icon: LightningBoltIcon,
     },
     {
       place: "#4",
       name: getKeyByValue(leaderboard, array[3]),
       description:
         'Almost there',
-      link:"https://leetcode.com/" + getKeyByValue(leaderboard, array[3]),
       count : array[3],
-      icon: PlusIcon,
+      easies : easies[getKeyByValue(leaderboard, array[3])],
+      meds : meds[getKeyByValue(leaderboard, array[3])],
+      hards : hards[getKeyByValue(leaderboard, array[3])],
+      icon: FastForwardIcon,
     },
     {
       place: "#5",
       name: getKeyByValue(leaderboard, array[4]),
       description:
         'Start Grinding Bro',
-      link:"https://leetcode.com/" + getKeyByValue(leaderboard, array[4]),
       count : array[4],
-      icon: PlusIcon,
+      easies : easies[getKeyByValue(leaderboard, array[4])],
+      meds : meds[getKeyByValue(leaderboard, array[4])],
+      hards : hards[getKeyByValue(leaderboard, array[4])],
+      icon: QuestionMarkCircleIcon,
     },
     {
       place: "#6",
       name: getKeyByValue(leaderboard, array[5]),
       description:
         'Step it up',
-      link:"https://leetcode.com/" + getKeyByValue(leaderboard, array[5]),
       count : array[5],
-      icon: PlusIcon,
+      easies : easies[getKeyByValue(leaderboard, array[5])],
+      meds : meds[getKeyByValue(leaderboard, array[5])],
+      hards : hards[getKeyByValue(leaderboard, array[5])],
+      icon: QuestionMarkCircleIcon,
     },
     {
       place: "#7",
       name: getKeyByValue(leaderboard, array[6]),
       description:
         'Are you even leetcoding??',
-      link:"https://leetcode.com/" + getKeyByValue(leaderboard, array[6]),
       count : array[6],
-      icon: PlusIcon,
+      easies : easies[getKeyByValue(leaderboard, array[6])],
+      meds : meds[getKeyByValue(leaderboard, array[6])],
+      hards : hards[getKeyByValue(leaderboard, array[6])],
+      icon: BanIcon,
     }
   ]
 
@@ -103,7 +115,7 @@ export default function Home({leaderboard, array, easies}) {
       </div>
       
       {ranks.map((rank) => (
-      <div className="bg-gradient-to-r from-cyan-600 to-indigo-500 mb-5 mx-24 rounded-md">
+      <div key={ranks.name} className="bg-gradient-to-r from-cyan-600 to-indigo-500 mb-5 mx-24 rounded-md">
         <div className="max-w-7xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between flex-wrap">
             <div className="w-0 flex-1 flex items-center">
@@ -112,7 +124,10 @@ export default function Home({leaderboard, array, easies}) {
               </span>
               <p className="ml-3 font-medium text-white truncate">
                 <span className="md:inline">{rank.place}  {rank.name} </span>
-                <span className="md:inline content-center">{rank.count}</span>
+                <span className="md:flex text-amber-500 md:text-center">Total: {rank.count}</span>
+                <span className="md:flex text-amber-500 md:text-center">Easy: {rank.easies}</span>
+                <span className="md:flex text-amber-500 md:text-center">Medium: {rank.meds}</span>
+                <span className="md:flex text-amber-500 md:text-center">Hard: {rank.hards}</span>
                 <span className="hidden md:block"> {rank.description} </span>
               </p>
             </div>
@@ -243,6 +258,10 @@ query Profile {
 
 let dict = {"echavemann" : 0, "jasonlu2025" : 0, "richard-bann" : 0, "davidpark2025" : 0, "aidanvillasenor" : 0, "gushaopengfrank" : 0, "JerayuT" : 0};
 let arr = []
+let easy = {"echavemann" : 0, "jasonlu2025" : 0, "richard-bann" : 0, "davidpark2025" : 0, "aidanvillasenor" : 0, "gushaopengfrank" : 0, "JerayuT" : 0}
+let med = {"echavemann" : 0, "jasonlu2025" : 0, "richard-bann" : 0, "davidpark2025" : 0, "aidanvillasenor" : 0, "gushaopengfrank" : 0, "JerayuT" : 0}
+let hard = {"echavemann" : 0, "jasonlu2025" : 0, "richard-bann" : 0, "davidpark2025" : 0, "aidanvillasenor" : 0, "gushaopengfrank" : 0, "JerayuT" : 0}
+
 
   for(let i = 0; i<q.length; i++)
   {
@@ -251,7 +270,9 @@ let arr = []
     });
     dict[data.matchedUser.username] = data.matchedUser.submitStats.acSubmissionNum[0].count;
     arr[i] = data.matchedUser.submitStats.acSubmissionNum[0].count;
-    
+    easy[data.matchedUser.username] = data.matchedUser.submitStats.acSubmissionNum[1].count;
+    med[data.matchedUser.username] = data.matchedUser.submitStats.acSubmissionNum[2].count;
+    hard[data.matchedUser.username] = data.matchedUser.submitStats.acSubmissionNum[3].count;
   }
 
  
@@ -261,7 +282,9 @@ let arr = []
     props: {
       leaderboard : dict,
       array : arr,
-      // easies : data.matchedUser.submitStats.acSubmissionNum[1]
+      easies : easy,
+      meds : med,
+      hards : hard
     }
   }
 }
