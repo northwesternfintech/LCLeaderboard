@@ -20,14 +20,15 @@ export default function Home({leaderboard, array, easies, meds, hards}) {
   array.reverse()
 
 
-  console.log(meds)
+  const people = {"echavemann" : "Ethan Havemann", "jasonlu2025" : "Jason Lu", "richard-bann" : "Richard Bann", "davidpark2025" : "David Park", "aidanvillasenor" : "Aidan Villasenor", "gushaopengfrank" : "Frank Gu", "JerayuT" : "Tom Tiamraj", "dmajcher" : "Daniel Majcher"};
 
   const ranks = [
     {
       place: "#1",
       name: getKeyByValue(leaderboard, array[0]),
+      realname: people[getKeyByValue(leaderboard, array[0])],
       description:
-        'Grindlord',
+        'Grind-lord',
       count : array[0],
       easies : easies[getKeyByValue(leaderboard, array[0])],
       meds : meds[getKeyByValue(leaderboard, array[0])],
@@ -38,6 +39,7 @@ export default function Home({leaderboard, array, easies, meds, hards}) {
     {
       place: "#2",
       name: getKeyByValue(leaderboard, array[1]),
+      realname: people[getKeyByValue(leaderboard, array[1])],
       description:  
         'Up and coming',
       count : array[1],
@@ -50,6 +52,7 @@ export default function Home({leaderboard, array, easies, meds, hards}) {
     {
       place: "#3",
       name: getKeyByValue(leaderboard, array[2]),
+      realname: people[getKeyByValue(leaderboard, array[2])],
       description:
         'Not Bad',
       count : array[2],
@@ -62,6 +65,7 @@ export default function Home({leaderboard, array, easies, meds, hards}) {
     {
       place: "#4",
       name: getKeyByValue(leaderboard, array[3]),
+      realname: people[getKeyByValue(leaderboard, array[3])],
       description:
         'Almost there',
       count : array[3],
@@ -74,6 +78,7 @@ export default function Home({leaderboard, array, easies, meds, hards}) {
     {
       place: "#5",
       name: getKeyByValue(leaderboard, array[4]),
+      realname: people[getKeyByValue(leaderboard, array[4])],
       description:
         'Start Grinding Bro',
       count : array[4],
@@ -86,6 +91,7 @@ export default function Home({leaderboard, array, easies, meds, hards}) {
     {
       place: "#6",
       name: getKeyByValue(leaderboard, array[5]),
+      realname: people[getKeyByValue(leaderboard, array[5])],
       description:
         'Step it up!',
       count : array[5],
@@ -98,6 +104,7 @@ export default function Home({leaderboard, array, easies, meds, hards}) {
     {
       place: "#7",
       name: getKeyByValue(leaderboard, array[6]),
+      realname: people[getKeyByValue(leaderboard, array[6])],
       description:
         'Bro, c\'mon',
       count : array[6],
@@ -110,6 +117,7 @@ export default function Home({leaderboard, array, easies, meds, hards}) {
     {
       place: "#8",
       name: getKeyByValue(leaderboard, array[7]),
+      realname: people[getKeyByValue(leaderboard, array[7])],
       description:
         'Are you even leetcoding??',
       count : array[7],
@@ -125,16 +133,19 @@ export default function Home({leaderboard, array, easies, meds, hards}) {
 
   return (
     <div className="bg-slate-900 h-screen overflow-auto">
-      <div className="py-10 hover:shadow-lg hover:shadow-indigo-400">
-        <div className="flex justify-center text-5xl font-light text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-indigo-500 to-white">
+      <div className="grid pt-12 pb-10 hover:shadow-lg hover:shadow-indigo-400">
+        <div className="flex justify-center sm:mx-auto text-6xl font-light text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-indigo-500 to-white">
           <h1>
               NU Fintech Leetcode Leaderboard
           </h1>
         </div>
+        <button className="grid content-center place-items-center mx-auto mt-5 bg-indigo-500 hover:bg-blue-500 hover:shadow-md hover:shadow-cyan-500 text-white font-normal py-2 px-4 rounded">
+          <a href="https://northwesternfintech.github.io">Check out NU Fintech!</a>
+        </button>
       </div>
       
       {ranks.map((rank) => (
-        <div key={rank.name} className="bg-gradient-to-r from-cyan-600 to-indigo-500 mb-8 mt-8 mx-24 rounded-md">
+        <div key={rank.name} className="hover:shadow-xl hover:shadow-amber-500 bg-gradient-to-r from-cyan-600 to-indigo-500 mb-8 mt-8 mx-24 rounded-md">
           <div className="max-w-7xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between flex-wrap">
               <div className="w-0 flex-1 flex items-center">
@@ -142,7 +153,7 @@ export default function Home({leaderboard, array, easies, meds, hards}) {
                   <rank.icon className="h-10 w-10 text-white" aria-hidden="true" />
                 </span>
                 <p className="ml-3 font-medium text-white truncate">
-                  <span className="md:block text-3xl bold">{rank.place}  {rank.name} </span>
+                  <span className="md:block text-3xl bold">{rank.place}  {rank.realname} </span>
                   {/* <span className="md:block text-amber-500 justify-center">Total: {rank.count}</span>
                   <span className="md:block text-amber-500 md:text-center">Easy: {rank.easies}</span>
                   <span className="md:block text-amber-500 md:text-center">Medium: {rank.meds}</span>
