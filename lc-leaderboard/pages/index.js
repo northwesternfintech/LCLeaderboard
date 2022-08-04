@@ -150,7 +150,7 @@ export default function Home({leaderboard, array, easies, meds, hards}) {
   return (
     <div className="bg-slate-900 h-screen overflow-auto">
       <div className="grid pt-12 pb-10 hover:shadow-lg hover:shadow-indigo-400">
-        <div className="content-center sm:mx-auto sm:pl-24 smd:pl-24 md:pl-0 text-6xl font-light text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-indigo-500 to-white">
+        <div className="content-center justify-center sm:mx-auto sm:pl-24 smd:pl-24 md:pl-0 text-6xl font-light text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-indigo-500 to-white">
           <h1>
               NU Fintech Leetcode Leaderboard
           </h1>
@@ -161,7 +161,7 @@ export default function Home({leaderboard, array, easies, meds, hards}) {
       </div>
       
       {ranks.map((rank) => (
-        <div key={rank.name} className="hover:shadow-xl hover:shadow-amber-500 bg-gradient-to-r from-cyan-600 to-indigo-500 mb-8 mt-8 mx-24 rounded-md">
+        <div key={rank.name} className="hover:shadow-xl hover:shadow-amber-500 bg-gradient-to-r from-cyan-600 to-indigo-500 mb-8 mt-8 sm:mx-12 md:mx-24 rounded-md">
           <div className="max-w-7xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
             <div className="flex items-center justify-between flex-wrap">
               <div className="w-0 flex-1 flex items-center">
