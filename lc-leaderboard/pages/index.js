@@ -133,7 +133,7 @@ export default function Home({leaderboard, array, easies, meds, hards}) {
       name: getKeyByValue(leaderboard, array[8]),
       realname: people[getKeyByValue(leaderboard, array[8])],
       description:
-        'Are you even leetcoding??',
+        'Road to retail',
       count : array[7],
       easies : easies[getKeyByValue(leaderboard, array[8])],
       meds : meds[getKeyByValue(leaderboard, array[8])],
