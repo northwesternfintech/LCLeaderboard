@@ -7,21 +7,22 @@ import { SpeakerphoneIcon, XIcon } from '@heroicons/react/outline'
 import { QuestionMarkCircleIcon, FireIcon, FastForwardIcon, BanIcon, StarIcon, LightningBoltIcon, PlusIcon} from '@heroicons/react/outline'
 import { data } from 'autoprefixer';
 
-
+// Function to find key with value of dictionary
 function getKeyByValue(object, value) {
   return Object.keys(object).find(key => object[key] === value);
 }
 
 
 
-
+// Main home function 
 export default function Home({leaderboard, array, easies, meds, hards}) {
   array.sort(function(a,b){return a - b})
   array.reverse()
 
+  // Username : Real Name
+  const people = {"echavemann" : "Ethan Havemann", "jasonlu2025" : "Jason Lu", "richard-bann" : "Richard Bann", "davidpark2025" : "David Park", "aidanvillasenor" : "Aidan Villasenor", "gushaopengfrank" : "Frank Gu", "JerayuT" : "Tom Tiamraj", "dmajcher" : "Daniel Majcher", "Yetermin8" : "Yetayal Tizale"};
 
-  const people = {"echavemann" : "Ethan Havemann", "jasonlu2025" : "Jason Lu", "richard-bann" : "Richard Bann", "davidpark2025" : "David Park", "aidanvillasenor" : "Aidan Villasenor", "gushaopengfrank" : "Frank Gu", "JerayuT" : "Tom Tiamraj", "dmajcher" : "Daniel Majcher"};
-
+  // Dictonary of leaderboard 
   const ranks = [
     {
       place: "#1",
@@ -126,11 +127,24 @@ export default function Home({leaderboard, array, easies, meds, hards}) {
       hards : hards[getKeyByValue(leaderboard, array[7])],
       link: "https://leetcode-stats.vercel.app/api?username=" + getKeyByValue(leaderboard, array[7]) + "&theme=Dark",
       icon: BanIcon,
+    },
+    {
+      place: "#9",
+      name: getKeyByValue(leaderboard, array[8]),
+      realname: people[getKeyByValue(leaderboard, array[8])],
+      description:
+        'Are you even leetcoding??',
+      count : array[7],
+      easies : easies[getKeyByValue(leaderboard, array[8])],
+      meds : meds[getKeyByValue(leaderboard, array[8])],
+      hards : hards[getKeyByValue(leaderboard, array[8])],
+      link: "https://leetcode-stats.vercel.app/api?username=" + getKeyByValue(leaderboard, array[8]) + "&theme=Dark",
+      icon: BanIcon,
     }
   ]
 
 
-
+ // Returning Front-end
   return (
     <div className="bg-slate-900 h-screen overflow-auto">
       <div className="grid pt-12 pb-10 hover:shadow-lg hover:shadow-indigo-400">
@@ -185,14 +199,14 @@ export default function Home({leaderboard, array, easies, meds, hards}) {
 }
 
 
-
+// Static Props function to query data on reload 
 export async function getStaticProps({}) {
   const client = new ApolloClient({
     uri: 'https://leetcode.com/graphql',
     cache: new InMemoryCache()
   });
 
-
+// Queries go here
 const q = [gql`
 query Profile { 
   matchedUser(username: "echavemann") {
@@ -297,15 +311,30 @@ query Profile {
     }
   }
 }
+`, gql`
+query Profile { 
+  matchedUser(username: "Yetermin8") {
+    username
+    submitStats: submitStatsGlobal {
+      acSubmissionNum {
+              difficulty
+              count
+              submissions
+      }
+    }
+  }
+}
 `] 
 
-let dict = {"echavemann" : 0, "jasonlu2025" : 0, "richard-bann" : 0, "davidpark2025" : 0, "aidanvillasenor" : 0, "gushaopengfrank" : 0, "JerayuT" : 0, "dmajcher" : 0};
+// Dictionaries to store data 
+let dict = {"echavemann" : 0, "jasonlu2025" : 0, "richard-bann" : 0, "davidpark2025" : 0, "aidanvillasenor" : 0, "gushaopengfrank" : 0, "JerayuT" : 0, "dmajcher" : 0, "Yetermin8" : 0};
 let arr = []
-let easy = {"echavemann" : 0, "jasonlu2025" : 0, "richard-bann" : 0, "davidpark2025" : 0, "aidanvillasenor" : 0, "gushaopengfrank" : 0, "JerayuT" : 0, "dmajcher" : 0}
-let med = {"echavemann" : 0, "jasonlu2025" : 0, "richard-bann" : 0, "davidpark2025" : 0, "aidanvillasenor" : 0, "gushaopengfrank" : 0, "JerayuT" : 0, "dmajcher" : 0}
-let hard = {"echavemann" : 0, "jasonlu2025" : 0, "richard-bann" : 0, "davidpark2025" : 0, "aidanvillasenor" : 0, "gushaopengfrank" : 0, "JerayuT" : 0, "dmajcher" : 0}
+let easy = {"echavemann" : 0, "jasonlu2025" : 0, "richard-bann" : 0, "davidpark2025" : 0, "aidanvillasenor" : 0, "gushaopengfrank" : 0, "JerayuT" : 0, "dmajcher" : 0, "Yetermin8" : 0}
+let med = {"echavemann" : 0, "jasonlu2025" : 0, "richard-bann" : 0, "davidpark2025" : 0, "aidanvillasenor" : 0, "gushaopengfrank" : 0, "JerayuT" : 0, "dmajcher" : 0, "Yetermin8" : 0}
+let hard = {"echavemann" : 0, "jasonlu2025" : 0, "richard-bann" : 0, "davidpark2025" : 0, "aidanvillasenor" : 0, "gushaopengfrank" : 0, "JerayuT" : 0, "dmajcher" : 0, "Yetermin8" : 0}
 
 
+  // Loop to store data of each query
   for(let i = 0; i<q.length; i++)
   {
     let { data } = await client.query({
@@ -318,6 +347,7 @@ let hard = {"echavemann" : 0, "jasonlu2025" : 0, "richard-bann" : 0, "davidpark2
     hard[data.matchedUser.username] = data.matchedUser.submitStats.acSubmissionNum[3].count;
   }
 
+  //returning the dictonaries 
   return {
     props: {
       leaderboard : dict,
