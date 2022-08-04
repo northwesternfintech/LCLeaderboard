@@ -44,6 +44,7 @@ export default function Home({ leaderboard, array, easies, meds, hards }) {
     dmajcher: "Daniel Majcher",
     Yetermin8: "Yetayal Tizale",
     Amiin5: "Amiin Muse",
+    thebarberthief: "Louis Gabison",
   };
 
   // Dictonary of leaderboard
@@ -424,6 +425,20 @@ export async function getStaticProps({}) {
         }
       }
     `,
+    gql`
+      query Profile {
+        matchedUser(username: "thebarberthief") {
+          username
+          submitStats: submitStatsGlobal {
+            acSubmissionNum {
+              difficulty
+              count
+              submissions
+            }
+          }
+        }
+      }
+    `,
   ];
 
   // Dictionaries to store data
@@ -475,6 +490,7 @@ export async function getStaticProps({}) {
     dmajcher: 0,
     Yetermin8: 0,
     Amiin5: 0,
+    thebarberthief: 0,
   };
 
   // Loop to store data of each query
