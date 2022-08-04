@@ -150,7 +150,7 @@ export default function Home({leaderboard, array, easies, meds, hards}) {
   return (
     <div className="bg-slate-900 h-screen overflow-auto">
       <div className="grid pt-12 pb-10 hover:shadow-lg hover:shadow-indigo-400">
-        <div className="flex justify-center sm:mx-auto text-6xl font-light text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-indigo-500 to-white">
+        <div className="content-center sm:mx-auto sm:pl-24 smd:pl-24 md:pl-0 text-6xl font-light text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-indigo-500 to-white">
           <h1>
               NU Fintech Leetcode Leaderboard
           </h1>
@@ -169,12 +169,13 @@ export default function Home({leaderboard, array, easies, meds, hards}) {
                   <rank.icon className="h-10 w-10 text-white" aria-hidden="true" />
                 </span>
                 <p className="ml-3 font-medium text-white truncate">
-                  <span className="md:block text-3xl bold">{rank.place}  {rank.realname} </span>
+                  <span className="sm:grid sm:mx-auto md:block text-3xl bold overflow-auto">{rank.place}  {rank.realname} </span>
                   {/* <span className="md:block text-amber-500 justify-center">Total: {rank.count}</span>
                   <span className="md:block text-amber-500 md:text-center">Easy: {rank.easies}</span>
                   <span className="md:block text-amber-500 md:text-center">Medium: {rank.meds}</span>
                   <span className="md:block text-amber-500 md:text-center">Hard: {rank.hards}</span> */}
-                  <span className="md:block text-xl text-yellow-500"> &rdquo;{rank.description}&rdquo;</span>
+                  <span className="md:block hidden text-xl text-yellow-500"> &rdquo;{rank.description}&rdquo;</span>
+                  <span className="sm:block hidden md:hidden text-xl text-yellow-500"> Total: {rank.count}</span>
                 </p>
               </div>
               <div className="order-3 mt-2 flex-shrink-0 w-full sm:order-2 sm:mt-0 sm:w-auto">
@@ -182,7 +183,21 @@ export default function Home({leaderboard, array, easies, meds, hards}) {
                   className="hidden xl:flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-indigo-600 bg-blue-500 hover:bg-indigo-500">
                   <img id="stats" src={rank.link}></img>
                 </span>
+                <p className="hidden sm:hidden smd:flex md:flex mdl:flex lg:hidden text-white text-xl font-normal">
+                  Total: {rank.count}
+                </p>
+                <p className="hidden sm:hidden smd:flex md:flex mdl:flex lg:hidden text-emerald-400 text-xl font-normal">
+                  Easy: {rank.easies}
+                </p>
               </div>
+              <div className="order-3 mt-2 ml-2 flex-shrink-0 w-full sm:order-2 sm:mt-0 sm:w-auto">
+                  <p className="hidden sm:hidden smd:flex md:flex mdl:flex lg:hidden text-yellow-500 text-xl font-normal">
+                    Medium: {rank.meds}
+                  </p>
+                  <p className="hidden sm:hidden smd:flex md:flex mdl:flex lg:hidden text-red-400 text-xl font-normal">
+                    Hard: {rank.hards}
+                  </p>
+                </div>
               <div className="order-2 flex-shrink-0 sm:order-3 sm:ml-3">
                 <button
                   type="button"
