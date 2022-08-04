@@ -19,6 +19,8 @@ export default function Home({leaderboard, array, easies, meds, hards}) {
   array.sort(function(a,b){return a - b})
   array.reverse()
 
+  console.log(array);
+
   // Username : Real Name
   const people = {"echavemann" : "Ethan Havemann", "jasonlu2025" : "Jason Lu", "richard-bann" : "Richard Bann", "davidpark2025" : "David Park", "aidanvillasenor" : "Aidan Villasenor", "gushaopengfrank" : "Frank Gu", "JerayuT" : "Tom Tiamraj", "dmajcher" : "Daniel Majcher", "Yetermin8" : "Yetayal Tizale"};
 
