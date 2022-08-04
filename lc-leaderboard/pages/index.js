@@ -43,6 +43,7 @@ export default function Home({ leaderboard, array, easies, meds, hards }) {
     JerayuT: "Tom Tiamraj",
     dmajcher: "Daniel Majcher",
     Yetermin8: "Yetayal Tizale",
+    Amiin5: "Amiin Muse",
   };
 
   // Dictonary of leaderboard
@@ -120,7 +121,7 @@ export default function Home({ leaderboard, array, easies, meds, hards }) {
         "https://leetcode-stats.vercel.app/api?username=" +
         getKeyByValue(leaderboard, array[4]) +
         "&theme=Dark",
-      icon: QuestionMarkCircleIcon,
+      icon: FastForwardIcon,
     },
     {
       place: "#6",
@@ -179,6 +180,21 @@ export default function Home({ leaderboard, array, easies, meds, hards }) {
       link:
         "https://leetcode-stats.vercel.app/api?username=" +
         getKeyByValue(leaderboard, array[8]) +
+        "&theme=Dark",
+      icon: ThumbDownIcon,
+    },
+    {
+      place: "#10",
+      name: getKeyByValue(leaderboard, array[9]),
+      realname: people[getKeyByValue(leaderboard, array[9])],
+      description: "Road to retail",
+      count: array[7],
+      easies: easies[getKeyByValue(leaderboard, array[9])],
+      meds: meds[getKeyByValue(leaderboard, array[9])],
+      hards: hards[getKeyByValue(leaderboard, array[9])],
+      link:
+        "https://leetcode-stats.vercel.app/api?username=" +
+        getKeyByValue(leaderboard, array[9]) +
         "&theme=Dark",
       icon: BanIcon,
     },
@@ -394,6 +410,20 @@ export async function getStaticProps({}) {
         }
       }
     `,
+    gql`
+      query Profile {
+        matchedUser(username: "Amiin5") {
+          username
+          submitStats: submitStatsGlobal {
+            acSubmissionNum {
+              difficulty
+              count
+              submissions
+            }
+          }
+        }
+      }
+    `,
   ];
 
   // Dictionaries to store data
@@ -407,6 +437,7 @@ export async function getStaticProps({}) {
     JerayuT: 0,
     dmajcher: 0,
     Yetermin8: 0,
+    Amiin5: 0,
   };
   let arr = [];
   let easy = {
@@ -419,6 +450,7 @@ export async function getStaticProps({}) {
     JerayuT: 0,
     dmajcher: 0,
     Yetermin8: 0,
+    Amiin5: 0,
   };
   let med = {
     echavemann: 0,
@@ -430,6 +462,7 @@ export async function getStaticProps({}) {
     JerayuT: 0,
     dmajcher: 0,
     Yetermin8: 0,
+    Amiin5: 0,
   };
   let hard = {
     echavemann: 0,
@@ -441,6 +474,7 @@ export async function getStaticProps({}) {
     JerayuT: 0,
     dmajcher: 0,
     Yetermin8: 0,
+    Amiin5: 0,
   };
 
   // Loop to store data of each query
