@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css'
 import react from 'react';
 import { ApolloClient, InMemoryCache, gql } from '@apollo/client';
 import { SpeakerphoneIcon, XIcon } from '@heroicons/react/outline'
-import { QuestionMarkCircleIcon, FireIcon, FastForwardIcon, BanIcon, StarIcon, LightningBoltIcon, PlusIcon} from '@heroicons/react/outline'
+import { ThumbDownIcon, QuestionMarkCircleIcon, FireIcon, FastForwardIcon, BanIcon, StarIcon, LightningBoltIcon, PlusIcon} from '@heroicons/react/outline'
 import { data } from 'autoprefixer';
 
 // Function to find key with value of dictionary
@@ -12,7 +12,7 @@ function getKeyByValue(object, value) {
   return Object.keys(object).find(key => object[key] === value);
 }
 
-
+// Link for list of icons: https://unpkg.com/browse/@heroicons/react@1.0.6/outline/
 
 // Main home function 
 export default function Home({leaderboard, array, easies, meds, hards}) {
@@ -44,7 +44,7 @@ export default function Home({leaderboard, array, easies, meds, hards}) {
       name: getKeyByValue(leaderboard, array[1]),
       realname: people[getKeyByValue(leaderboard, array[1])],
       description:  
-        'Up and coming',
+        'Global E-Leet',
       count : array[1],
       easies : easies[getKeyByValue(leaderboard, array[1])],
       meds : meds[getKeyByValue(leaderboard, array[1])],
@@ -128,7 +128,7 @@ export default function Home({leaderboard, array, easies, meds, hards}) {
       meds : meds[getKeyByValue(leaderboard, array[7])],
       hards : hards[getKeyByValue(leaderboard, array[7])],
       link: "https://leetcode-stats.vercel.app/api?username=" + getKeyByValue(leaderboard, array[7]) + "&theme=Dark",
-      icon: BanIcon,
+      icon: ThumbDownIcon,
     },
     {
       place: "#9",
