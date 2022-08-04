@@ -43,6 +43,7 @@ export default function Home({ leaderboard, array, easies, meds, hards }) {
     Yetermin8: "Yetayal Tizale",
     Amiin5: "Amiin Muse",
     thebarberthief: "Louis Gabison",
+    PeterL712: "Peter Lau",
   };
 
   // Dictonary of leaderboard
@@ -437,6 +438,20 @@ export async function getStaticProps({}) {
         }
       }
     `,
+    gql`
+    query Profile {
+      matchedUser(username: "PeterL712") {
+        username
+        submitStats: submitStatsGlobal {
+          acSubmissionNum {
+            difficulty
+            count
+            submissions
+          }
+        }
+      }
+    }
+  `,
   ];
 
   // Dictionaries to store data
@@ -451,6 +466,7 @@ export async function getStaticProps({}) {
     dmajcher: 0,
     Yetermin8: 0,
     Amiin5: 0,
+    PeterL712: 0,
   };
   let arr = [];
   let easy = {
@@ -464,6 +480,7 @@ export async function getStaticProps({}) {
     dmajcher: 0,
     Yetermin8: 0,
     Amiin5: 0,
+    PeterL712: 0,
   };
   let med = {
     echavemann: 0,
@@ -476,6 +493,7 @@ export async function getStaticProps({}) {
     dmajcher: 0,
     Yetermin8: 0,
     Amiin5: 0,
+    PeterL712: 0,
   };
   let hard = {
     echavemann: 0,
@@ -489,6 +507,7 @@ export async function getStaticProps({}) {
     Yetermin8: 0,
     Amiin5: 0,
     thebarberthief: 0,
+    PeterL712: 0,
   };
 
   // Loop to store data of each query
