@@ -115,7 +115,7 @@ export default function Home({leaderboard, array, easies, meds, hards}) {
       meds : meds[getKeyByValue(leaderboard, array[6])],
       hards : hards[getKeyByValue(leaderboard, array[6])],
       link: "https://leetcode-stats.vercel.app/api?username=" + getKeyByValue(leaderboard, array[6]) + "&theme=Dark",
-      icon: BanIcon,
+      icon: QuestionMarkCircleIcon,
     },
     {
       place: "#8",
