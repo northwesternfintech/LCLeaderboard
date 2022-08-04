@@ -27,7 +27,7 @@ export default function Home({leaderboard, array, easies, meds, hards}) {
       place: "#1",
       name: getKeyByValue(leaderboard, array[0]),
       description:
-        'GrindLord',
+        'Grindlord',
       count : array[0],
       easies : easies[getKeyByValue(leaderboard, array[0])],
       meds : meds[getKeyByValue(leaderboard, array[0])],
@@ -38,7 +38,7 @@ export default function Home({leaderboard, array, easies, meds, hards}) {
     {
       place: "#2",
       name: getKeyByValue(leaderboard, array[1]),
-      description:
+      description:  
         'Up and coming',
       count : array[1],
       easies : easies[getKeyByValue(leaderboard, array[1])],
@@ -83,7 +83,7 @@ export default function Home({leaderboard, array, easies, meds, hards}) {
       place: "#6",
       name: getKeyByValue(leaderboard, array[5]),
       description:
-        'Step it up',
+        'Step it up!',
       count : array[5],
       easies : easies[getKeyByValue(leaderboard, array[5])],
       meds : meds[getKeyByValue(leaderboard, array[5])],
@@ -94,7 +94,7 @@ export default function Home({leaderboard, array, easies, meds, hards}) {
       place: "#7",
       name: getKeyByValue(leaderboard, array[6]),
       description:
-        'Bro, comon',
+        'Bro, c\'mon',
       count : array[6],
       easies : easies[getKeyByValue(leaderboard, array[6])],
       meds : meds[getKeyByValue(leaderboard, array[6])],
