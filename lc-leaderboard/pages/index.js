@@ -158,12 +158,12 @@ export default function Home({leaderboard, array, easies, meds, hards}) {
                   <span className="md:block text-amber-500 md:text-center">Easy: {rank.easies}</span>
                   <span className="md:block text-amber-500 md:text-center">Medium: {rank.meds}</span>
                   <span className="md:block text-amber-500 md:text-center">Hard: {rank.hards}</span> */}
-                  <span className="md:block text-xl text-yellow-500"> "{rank.description}"</span>
+                  <span className="md:block text-xl text-yellow-500"> &rdquo;{rank.description}&rdquo;</span>
                 </p>
               </div>
               <div className="order-3 mt-2 flex-shrink-0 w-full sm:order-2 sm:mt-0 sm:w-auto">
                 <span
-                  className="md:flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-indigo-600 bg-blue-500 hover:bg-indigo-500 sm:hidden">
+                  className="hidden xl:flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-indigo-600 bg-blue-500 hover:bg-indigo-500">
                   <img id="stats" src={rank.link}></img>
                 </span>
               </div>
