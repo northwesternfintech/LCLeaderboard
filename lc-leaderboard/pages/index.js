@@ -178,7 +178,7 @@ export default function Home({leaderboard, array, easies, meds, hards}) {
                   <span className="block md:hidden text-xl text-yellow-500"> Total: {rank.count}</span>
                 </p>
               </div>
-              <div className="order-3 mt-2 flex-shrink-0 w-full sm:order-2 sm:mt-0 sm:w-auto">
+              <div className="order-3 mt-2 flex-shrink-0 w-full sm:order-2 sm:mt-0 sm:w-auto ml-2">
                 <span
                   className="hidden xl:flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-indigo-600 bg-blue-500 hover:bg-indigo-500">
                   <img id="stats" src={rank.link}></img>
@@ -190,7 +190,7 @@ export default function Home({leaderboard, array, easies, meds, hards}) {
                   Easy: {rank.easies}
                 </p>
               </div>
-              <div className="order-3 mt-2 ml-2 flex-shrink-0 w-full sm:order-2 sm:mt-0 sm:w-auto">
+              <div className="order-3 mt-2 ml-2 flex-shrink-0 w-full sm:order-2 sm:mt-0 sm:w-auto ml-2">
                   <p className="hidden sm:hidden smd:flex md:flex mdl:flex lg:hidden text-yellow-500 text-xl font-normal">
                     Medium: {rank.meds}
                   </p>
