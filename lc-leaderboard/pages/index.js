@@ -30,8 +30,6 @@ export default function Home({ leaderboard, array, easies, meds, hards }) {
   });
   array.reverse();
 
-  console.log(array);
-
   // Username : Real Name
   const people = {
     echavemann: "Ethan Havemann",
