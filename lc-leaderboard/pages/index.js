@@ -32,7 +32,7 @@ export default function Home({leaderboard, array, easies, meds, hards}) {
       easies : easies[getKeyByValue(leaderboard, array[0])],
       meds : meds[getKeyByValue(leaderboard, array[0])],
       hards : hards[getKeyByValue(leaderboard, array[0])],
-      link: "https://leetcode-stats.vercel.app/api?username=echavemann&theme=Dark",
+      link: "https://leetcode-stats.vercel.app/api?username=" + getKeyByValue(leaderboard, array[0]) + "&theme=Dark",
       icon: FireIcon,
     },
     {
@@ -44,6 +44,7 @@ export default function Home({leaderboard, array, easies, meds, hards}) {
       easies : easies[getKeyByValue(leaderboard, array[1])],
       meds : meds[getKeyByValue(leaderboard, array[1])],
       hards : hards[getKeyByValue(leaderboard, array[1])],
+      link: "https://leetcode-stats.vercel.app/api?username=" + getKeyByValue(leaderboard, array[1]) + "&theme=Dark",
       icon: StarIcon,
     },
     {
@@ -55,6 +56,7 @@ export default function Home({leaderboard, array, easies, meds, hards}) {
       easies : easies[getKeyByValue(leaderboard, array[2])],
       meds : meds[getKeyByValue(leaderboard, array[2])],
       hards : hards[getKeyByValue(leaderboard, array[2])],
+      link: "https://leetcode-stats.vercel.app/api?username=" + getKeyByValue(leaderboard, array[2]) + "&theme=Dark",
       icon: LightningBoltIcon,
     },
     {
@@ -66,6 +68,7 @@ export default function Home({leaderboard, array, easies, meds, hards}) {
       easies : easies[getKeyByValue(leaderboard, array[3])],
       meds : meds[getKeyByValue(leaderboard, array[3])],
       hards : hards[getKeyByValue(leaderboard, array[3])],
+      link: "https://leetcode-stats.vercel.app/api?username=" + getKeyByValue(leaderboard, array[3]) + "&theme=Dark",
       icon: FastForwardIcon,
     },
     {
@@ -77,6 +80,7 @@ export default function Home({leaderboard, array, easies, meds, hards}) {
       easies : easies[getKeyByValue(leaderboard, array[4])],
       meds : meds[getKeyByValue(leaderboard, array[4])],
       hards : hards[getKeyByValue(leaderboard, array[4])],
+      link: "https://leetcode-stats.vercel.app/api?username=" + getKeyByValue(leaderboard, array[4]) + "&theme=Dark",
       icon: QuestionMarkCircleIcon,
     },
     {
@@ -88,6 +92,7 @@ export default function Home({leaderboard, array, easies, meds, hards}) {
       easies : easies[getKeyByValue(leaderboard, array[5])],
       meds : meds[getKeyByValue(leaderboard, array[5])],
       hards : hards[getKeyByValue(leaderboard, array[5])],
+      link: "https://leetcode-stats.vercel.app/api?username=" + getKeyByValue(leaderboard, array[5]) + "&theme=Dark",
       icon: QuestionMarkCircleIcon,
     },
     {
@@ -99,6 +104,7 @@ export default function Home({leaderboard, array, easies, meds, hards}) {
       easies : easies[getKeyByValue(leaderboard, array[6])],
       meds : meds[getKeyByValue(leaderboard, array[6])],
       hards : hards[getKeyByValue(leaderboard, array[6])],
+      link: "https://leetcode-stats.vercel.app/api?username=" + getKeyByValue(leaderboard, array[6]) + "&theme=Dark",
       icon: BanIcon,
     },
     {
@@ -110,6 +116,7 @@ export default function Home({leaderboard, array, easies, meds, hards}) {
       easies : easies[getKeyByValue(leaderboard, array[7])],
       meds : meds[getKeyByValue(leaderboard, array[7])],
       hards : hards[getKeyByValue(leaderboard, array[7])],
+      link: "https://leetcode-stats.vercel.app/api?username=" + getKeyByValue(leaderboard, array[7]) + "&theme=Dark",
       icon: BanIcon,
     }
   ]
@@ -118,8 +125,8 @@ export default function Home({leaderboard, array, easies, meds, hards}) {
 
   return (
     <div className="bg-slate-900 h-screen overflow-auto">
-      <div className="py-10">
-        <div className="flex justify-center text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-indigo-500 to-white">
+      <div className="py-10 hover:shadow-lg hover:shadow-indigo-400">
+        <div className="flex justify-center text-5xl font-light text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-indigo-500 to-white">
           <h1>
               NU Fintech Leetcode Leaderboard
           </h1>
@@ -127,40 +134,40 @@ export default function Home({leaderboard, array, easies, meds, hards}) {
       </div>
       
       {ranks.map((rank) => (
-      <div key={ranks.name} className="bg-gradient-to-r from-cyan-600 to-indigo-500 mb-8 mx-24 rounded-md">
-        <div className="max-w-7xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between flex-wrap">
-            <div className="w-0 flex-1 flex items-center">
-              <span className="flex p-2 rounded-lg bg-amber-500">
-                <rank.icon className="h-6 w-6 text-white" aria-hidden="true" />
-              </span>
-              <p className="ml-3 font-medium text-white truncate">
-                <span className="md:block text-xl">{rank.place}  {rank.name} </span>
-                {/* <span className="md:block text-amber-500 justify-center">Total: {rank.count}</span>
-                <span className="md:block text-amber-500 md:text-center">Easy: {rank.easies}</span>
-                <span className="md:block text-amber-500 md:text-center">Medium: {rank.meds}</span>
-                <span className="md:block text-amber-500 md:text-center">Hard: {rank.hards}</span> */}
-                <span className="hidden md:block"> {rank.description} </span>
-              </p>
-            </div>
-            <div className="order-3 mt-2 flex-shrink-0 w-full sm:order-2 sm:mt-0 sm:w-auto">
-              <span
-                className="flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-indigo-600 bg-blue-500 hover:bg-indigo-50">
-                <img id="stats" src="https://leetcode-stats.vercel.app/api?username=echavemann&theme=Dark"></img>
-              </span>
-            </div>
-            <div className="order-2 flex-shrink-0 sm:order-3 sm:ml-3">
-              <button
-                type="button"
-                className="-mr-1 flex p-2 rounded-md hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-white sm:-mr-2"
-              >
-              </button>
-              
+        <div key={rank.name} className="bg-gradient-to-r from-cyan-600 to-indigo-500 mb-8 mt-8 mx-24 rounded-md">
+          <div className="max-w-7xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
+            <div className="flex items-center justify-between flex-wrap">
+              <div className="w-0 flex-1 flex items-center">
+                <span className="flex p-2 rounded-lg bg-amber-500">
+                  <rank.icon className="h-10 w-10 text-white" aria-hidden="true" />
+                </span>
+                <p className="ml-3 font-medium text-white truncate">
+                  <span className="md:block text-3xl bold">{rank.place}  {rank.name} </span>
+                  {/* <span className="md:block text-amber-500 justify-center">Total: {rank.count}</span>
+                  <span className="md:block text-amber-500 md:text-center">Easy: {rank.easies}</span>
+                  <span className="md:block text-amber-500 md:text-center">Medium: {rank.meds}</span>
+                  <span className="md:block text-amber-500 md:text-center">Hard: {rank.hards}</span> */}
+                  <span className="md:block text-xl text-yellow-500"> "{rank.description}"</span>
+                </p>
+              </div>
+              <div className="order-3 mt-2 flex-shrink-0 w-full sm:order-2 sm:mt-0 sm:w-auto">
+                <span
+                  className="md:flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-indigo-600 bg-blue-500 hover:bg-indigo-500 sm:hidden">
+                  <img id="stats" src={rank.link}></img>
+                </span>
+              </div>
+              <div className="order-2 flex-shrink-0 sm:order-3 sm:ml-3">
+                <button
+                  type="button"
+                  className="-mr-1 flex p-2 rounded-md hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-white sm:-mr-2"
+                >
+                </button>
+                
+              </div>
             </div>
           </div>
-        </div>
 
-      </div>
+        </div>
       ))}
     </div>
   )
@@ -299,9 +306,6 @@ let hard = {"echavemann" : 0, "jasonlu2025" : 0, "richard-bann" : 0, "davidpark2
     med[data.matchedUser.username] = data.matchedUser.submitStats.acSubmissionNum[2].count;
     hard[data.matchedUser.username] = data.matchedUser.submitStats.acSubmissionNum[3].count;
   }
-
- 
-  
 
   return {
     props: {
