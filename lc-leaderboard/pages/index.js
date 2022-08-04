@@ -16,15 +16,10 @@ import {
 } from "@heroicons/react/outline";
 import { data } from "autoprefixer";
 
-// Function to find key with value of dictionary
-function getKeyByValue(object, value) {
-  return Object.keys(object).find((key) => object[key] === value);
-}
-
 // Link for list of icons: https://unpkg.com/browse/@heroicons/react@1.0.6/outline/
 
 // Main home function
-export default function Home({ leaderboard, array, easies, meds, hards }) {
+export default function Home({ array, easies, meds, hards, revlead }) {
   array.sort(function (a, b) {
     return a - b;
   });
@@ -45,155 +40,166 @@ export default function Home({ leaderboard, array, easies, meds, hards }) {
     thebarberthief: "Louis Gabison",
   };
 
+  let separation = Object.entries(revlead);
+  let arrayNames = [];
+  separation.forEach(([key, value]) => {
+    for (let i = 0; i < value.length; i++) {
+      arrayNames.push(value[i]);
+    }
+  });
+
+  arrayNames.reverse();
+  console.log(arrayNames);
+
   // Dictonary of leaderboard
   const ranks = [
     {
       place: "#1",
-      name: getKeyByValue(leaderboard, array[0]),
-      realname: people[getKeyByValue(leaderboard, array[0])],
+      name: arrayNames[0],
+      realname: people[arrayNames[0]],
       description: "Grind-lord",
       count: array[0],
-      easies: easies[getKeyByValue(leaderboard, array[0])],
-      meds: meds[getKeyByValue(leaderboard, array[0])],
-      hards: hards[getKeyByValue(leaderboard, array[0])],
+      easies: easies[arrayNames[0]],
+      meds: meds[arrayNames[0]],
+      hards: hards[arrayNames[0]],
       link:
         "https://leetcode-stats.vercel.app/api?username=" +
-        getKeyByValue(leaderboard, array[0]) +
+        arrayNames[0] +
         "&theme=Dark",
       icon: FireIcon,
     },
     {
       place: "#2",
-      name: getKeyByValue(leaderboard, array[1]),
-      realname: people[getKeyByValue(leaderboard, array[1])],
-      description: "Global E-Leet",
+      name: arrayNames[1],
+      realname: people[arrayNames[1]],
+      description: "Global-E-Leet",
       count: array[1],
-      easies: easies[getKeyByValue(leaderboard, array[1])],
-      meds: meds[getKeyByValue(leaderboard, array[1])],
-      hards: hards[getKeyByValue(leaderboard, array[1])],
+      easies: easies[arrayNames[1]],
+      meds: meds[arrayNames[1]],
+      hards: hards[arrayNames[1]],
       link:
         "https://leetcode-stats.vercel.app/api?username=" +
-        getKeyByValue(leaderboard, array[1]) +
+        arrayNames[1] +
         "&theme=Dark",
       icon: StarIcon,
     },
     {
       place: "#3",
-      name: getKeyByValue(leaderboard, array[2]),
-      realname: people[getKeyByValue(leaderboard, array[2])],
-      description: "Not Bad",
+      name: arrayNames[2],
+      realname: people[arrayNames[2]],
+      description: "Third place is the second loser",
       count: array[2],
-      easies: easies[getKeyByValue(leaderboard, array[2])],
-      meds: meds[getKeyByValue(leaderboard, array[2])],
-      hards: hards[getKeyByValue(leaderboard, array[2])],
+      easies: easies[arrayNames[2]],
+      meds: meds[arrayNames[2]],
+      hards: hards[arrayNames[2]],
       link:
         "https://leetcode-stats.vercel.app/api?username=" +
-        getKeyByValue(leaderboard, array[2]) +
+        arrayNames[2] +
         "&theme=Dark",
       icon: LightningBoltIcon,
     },
     {
       place: "#4",
-      name: getKeyByValue(leaderboard, array[3]),
-      realname: people[getKeyByValue(leaderboard, array[3])],
-      description: "Almost there",
+      name: arrayNames[3],
+      realname: people[arrayNames[3]],
+      description: "Not bad",
       count: array[3],
-      easies: easies[getKeyByValue(leaderboard, array[3])],
-      meds: meds[getKeyByValue(leaderboard, array[3])],
-      hards: hards[getKeyByValue(leaderboard, array[3])],
+      easies: easies[arrayNames[3]],
+      meds: meds[arrayNames[3]],
+      hards: hards[arrayNames[3]],
       link:
         "https://leetcode-stats.vercel.app/api?username=" +
-        getKeyByValue(leaderboard, array[3]) +
+        arrayNames[3] +
         "&theme=Dark",
       icon: FastForwardIcon,
     },
     {
       place: "#5",
-      name: getKeyByValue(leaderboard, array[4]),
-      realname: people[getKeyByValue(leaderboard, array[4])],
-      description: "Start Grinding Bro",
+      name: arrayNames[4],
+      realname: people[arrayNames[4]],
+      description: "Keep at it",
       count: array[4],
-      easies: easies[getKeyByValue(leaderboard, array[4])],
-      meds: meds[getKeyByValue(leaderboard, array[4])],
-      hards: hards[getKeyByValue(leaderboard, array[4])],
+      easies: easies[arrayNames[4]],
+      meds: meds[arrayNames[4]],
+      hards: hards[arrayNames[4]],
       link:
         "https://leetcode-stats.vercel.app/api?username=" +
-        getKeyByValue(leaderboard, array[4]) +
+        arrayNames[4] +
         "&theme=Dark",
       icon: FastForwardIcon,
     },
     {
       place: "#6",
-      name: getKeyByValue(leaderboard, array[5]),
-      realname: people[getKeyByValue(leaderboard, array[5])],
-      description: "Step it up!",
+      name: arrayNames[5],
+      realname: people[arrayNames[5]],
+      description: "Start Grinding Bro",
       count: array[5],
-      easies: easies[getKeyByValue(leaderboard, array[5])],
-      meds: meds[getKeyByValue(leaderboard, array[5])],
-      hards: hards[getKeyByValue(leaderboard, array[5])],
+      easies: easies[arrayNames[5]],
+      meds: meds[arrayNames[5]],
+      hards: hards[arrayNames[5]],
       link:
         "https://leetcode-stats.vercel.app/api?username=" +
-        getKeyByValue(leaderboard, array[5]) +
+        arrayNames[5] +
         "&theme=Dark",
       icon: QuestionMarkCircleIcon,
     },
     {
       place: "#7",
-      name: getKeyByValue(leaderboard, array[6]),
-      realname: people[getKeyByValue(leaderboard, array[6])],
-      description: "Bro, c'mon",
+      name: arrayNames[6],
+      realname: people[arrayNames[6]],
+      description: "Bro c'mon",
       count: array[6],
-      easies: easies[getKeyByValue(leaderboard, array[6])],
-      meds: meds[getKeyByValue(leaderboard, array[6])],
-      hards: hards[getKeyByValue(leaderboard, array[6])],
+      easies: easies[arrayNames[6]],
+      meds: meds[arrayNames[6]],
+      hards: hards[arrayNames[6]],
       link:
         "https://leetcode-stats.vercel.app/api?username=" +
-        getKeyByValue(leaderboard, array[6]) +
+        arrayNames[6] +
         "&theme=Dark",
       icon: QuestionMarkCircleIcon,
     },
     {
       place: "#8",
-      name: getKeyByValue(leaderboard, array[7]),
-      realname: people[getKeyByValue(leaderboard, array[7])],
-      description: "Are you even leetcoding??",
+      name: arrayNames[7],
+      realname: people[arrayNames[7]],
+      description: "Are you even Leetcoding?",
       count: array[7],
-      easies: easies[getKeyByValue(leaderboard, array[7])],
-      meds: meds[getKeyByValue(leaderboard, array[7])],
-      hards: hards[getKeyByValue(leaderboard, array[7])],
+      easies: easies[arrayNames[7]],
+      meds: meds[arrayNames[7]],
+      hards: hards[arrayNames[7]],
       link:
         "https://leetcode-stats.vercel.app/api?username=" +
-        getKeyByValue(leaderboard, array[7]) +
+        arrayNames[7] +
         "&theme=Dark",
       icon: ThumbDownIcon,
     },
     {
       place: "#9",
-      name: getKeyByValue(leaderboard, array[8]),
-      realname: people[getKeyByValue(leaderboard, array[8])],
+      name: arrayNames[8],
+      realname: people[arrayNames[8]],
       description: "Road to retail",
-      count: array[7],
-      easies: easies[getKeyByValue(leaderboard, array[8])],
-      meds: meds[getKeyByValue(leaderboard, array[8])],
-      hards: hards[getKeyByValue(leaderboard, array[8])],
+      count: array[8],
+      easies: easies[arrayNames[8]],
+      meds: meds[arrayNames[8]],
+      hards: hards[arrayNames[8]],
       link:
         "https://leetcode-stats.vercel.app/api?username=" +
-        getKeyByValue(leaderboard, array[8]) +
+        arrayNames[8] +
         "&theme=Dark",
       icon: ThumbDownIcon,
     },
     {
       place: "#10",
-      name: getKeyByValue(leaderboard, array[9]),
-      realname: people[getKeyByValue(leaderboard, array[9])],
+      name: arrayNames[9],
+      realname: people[arrayNames[9]],
       description: "End of the line",
-      count: array[7],
-      easies: easies[getKeyByValue(leaderboard, array[9])],
-      meds: meds[getKeyByValue(leaderboard, array[9])],
-      hards: hards[getKeyByValue(leaderboard, array[9])],
+      count: array[9],
+      easies: easies[arrayNames[9]],
+      meds: meds[arrayNames[9]],
+      hards: hards[arrayNames[9]],
       link:
         "https://leetcode-stats.vercel.app/api?username=" +
-        getKeyByValue(leaderboard, array[9]) +
+        arrayNames[9] +
         "&theme=Dark",
       icon: BanIcon,
     },
@@ -202,7 +208,7 @@ export default function Home({ leaderboard, array, easies, meds, hards }) {
   // Returning Front-end
   return (
     <div className="bg-slate-900 h-screen overflow-auto">
-      <div className="pt-12 pb-10 hover:shadow-lg hover:shadow-indigo-400">
+      <div className="pt-12 pb-10 shadow-lg shadow-indigo-400 hover:shadow-indigo-500">
         <div className="grid place-items-center align-middle text-center text-6xl font-light text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 via-indigo-500 to-white">
           <h1>NU Fintech Leetcode Leaderboard</h1>
         </div>
@@ -211,6 +217,9 @@ export default function Home({ leaderboard, array, easies, meds, hards }) {
             Check out NU Fintech!
           </a>
         </button>
+        <div className="grid place-items-center align-middle text-center text-xl pt-6 font-light text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-white">
+          <h1>Rank based on # of questions completed</h1>
+        </div>
       </div>
 
       {ranks.map((rank) => (
@@ -440,18 +449,7 @@ export async function getStaticProps({}) {
   ];
 
   // Dictionaries to store data
-  let dict = {
-    echavemann: 0,
-    jasonlu2025: 0,
-    "richard-bann": 0,
-    davidpark2025: 0,
-    aidanvillasenor: 0,
-    gushaopengfrank: 0,
-    JerayuT: 0,
-    dmajcher: 0,
-    Yetermin8: 0,
-    Amiin5: 0,
-  };
+  let dict2 = {};
   let arr = [];
   let easy = {
     echavemann: 0,
@@ -496,8 +494,6 @@ export async function getStaticProps({}) {
     let { data } = await client.query({
       query: q[i],
     });
-    dict[data.matchedUser.username] =
-      data.matchedUser.submitStats.acSubmissionNum[0].count;
     arr[i] = data.matchedUser.submitStats.acSubmissionNum[0].count;
     easy[data.matchedUser.username] =
       data.matchedUser.submitStats.acSubmissionNum[1].count;
@@ -505,16 +501,21 @@ export async function getStaticProps({}) {
       data.matchedUser.submitStats.acSubmissionNum[2].count;
     hard[data.matchedUser.username] =
       data.matchedUser.submitStats.acSubmissionNum[3].count;
+    let key = data.matchedUser.submitStats.acSubmissionNum[0].count;
+    if (dict2[key] == null) {
+      dict2[key] = [];
+    }
+    dict2[key].push(data.matchedUser.username);
   }
 
   //returning the dictonaries
   return {
     props: {
-      leaderboard: dict,
       array: arr,
       easies: easy,
       meds: med,
       hards: hard,
+      revlead: dict2,
     },
   };
 }
