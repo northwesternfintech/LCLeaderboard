@@ -188,7 +188,7 @@ export default function Home({ leaderboard, array, easies, meds, hards }) {
       place: "#10",
       name: getKeyByValue(leaderboard, array[9]),
       realname: people[getKeyByValue(leaderboard, array[9])],
-      description: "Road to retail",
+      description: "End of the line",
       count: array[7],
       easies: easies[getKeyByValue(leaderboard, array[9])],
       meds: meds[getKeyByValue(leaderboard, array[9])],
