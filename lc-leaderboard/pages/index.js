@@ -75,6 +75,7 @@ export default function Home({ array, easies, meds, hards, revlead }) {
         "https://leetcode-stats.vercel.app/api?username=" +
         arrayNames[0] +
         "&theme=Dark",
+      profile: "https://leetcode.com/" + arrayNames[0],
       icon: FireIcon,
     },
     {
@@ -90,6 +91,7 @@ export default function Home({ array, easies, meds, hards, revlead }) {
         "https://leetcode-stats.vercel.app/api?username=" +
         arrayNames[1] +
         "&theme=Dark",
+      profile: "https://leetcode.com/" + arrayNames[1],
       icon: StarIcon,
     },
     {
@@ -105,6 +107,7 @@ export default function Home({ array, easies, meds, hards, revlead }) {
         "https://leetcode-stats.vercel.app/api?username=" +
         arrayNames[2] +
         "&theme=Dark",
+      profile: "https://leetcode.com/" + arrayNames[2],
       icon: LightningBoltIcon,
     },
     {
@@ -120,6 +123,7 @@ export default function Home({ array, easies, meds, hards, revlead }) {
         "https://leetcode-stats.vercel.app/api?username=" +
         arrayNames[3] +
         "&theme=Dark",
+      profile: "https://leetcode.com/" + arrayNames[3],
       icon: FastForwardIcon,
     },
     {
@@ -135,6 +139,7 @@ export default function Home({ array, easies, meds, hards, revlead }) {
         "https://leetcode-stats.vercel.app/api?username=" +
         arrayNames[4] +
         "&theme=Dark",
+      profile: "https://leetcode.com/" + arrayNames[4],
       icon: FastForwardIcon,
     },
     {
@@ -150,6 +155,7 @@ export default function Home({ array, easies, meds, hards, revlead }) {
         "https://leetcode-stats.vercel.app/api?username=" +
         arrayNames[5] +
         "&theme=Dark",
+      profile: "https://leetcode.com/" + arrayNames[5],
       icon: QuestionMarkCircleIcon,
     },
     {
@@ -165,6 +171,7 @@ export default function Home({ array, easies, meds, hards, revlead }) {
         "https://leetcode-stats.vercel.app/api?username=" +
         arrayNames[6] +
         "&theme=Dark",
+      profile: "https://leetcode.com/" + arrayNames[6],
       icon: QuestionMarkCircleIcon,
     },
     {
@@ -180,6 +187,7 @@ export default function Home({ array, easies, meds, hards, revlead }) {
         "https://leetcode-stats.vercel.app/api?username=" +
         arrayNames[7] +
         "&theme=Dark",
+      profile: "https://leetcode.com/" + arrayNames[7],
       icon: ThumbDownIcon,
     },
     {
@@ -195,6 +203,7 @@ export default function Home({ array, easies, meds, hards, revlead }) {
         "https://leetcode-stats.vercel.app/api?username=" +
         arrayNames[8] +
         "&theme=Dark",
+      profile: "https://leetcode.com/" + arrayNames[8],
       icon: ThumbDownIcon,
     },
     {
@@ -210,6 +219,7 @@ export default function Home({ array, easies, meds, hards, revlead }) {
         "https://leetcode-stats.vercel.app/api?username=" +
         arrayNames[9] +
         "&theme=Dark",
+      profile: "https://leetcode.com/" + arrayNames[9],
       icon: BanIcon,
     },
   ];
@@ -261,7 +271,9 @@ export default function Home({ array, easies, meds, hards, revlead }) {
               </div>
               <div className="order-3 mt-2 flex-shrink-0 w-full sm:order-2 sm:mt-0 sm:w-auto ml-2">
                 <span className="hidden xl:flex items-center justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-indigo-600 bg-blue-500 hover:bg-indigo-500">
-                  <img id="stats" src={rank.link}></img>
+                  <a href={rank.profile}>
+                    <img id="stats" src={rank.link}></img>
+                  </a>
                 </span>
                 <p className="hidden sm:hidden smd:flex md:flex mdl:flex xl:hidden text-white text-xl font-normal">
                   Total: {rank.count}
