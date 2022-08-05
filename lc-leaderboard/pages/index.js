@@ -297,7 +297,8 @@ export default function Home({ array, easies, meds, hards, revlead }) {
                 </span>
                 <p className="ml-3 font-light truncate">
                   <span className="hidden sm:grid sm:mx-auto md:block font-medium text-yellow-500 text-xl">
-                    &rdquo Y&lsquoall Gotta Start Leetcoding&rdquo
+                    {" "}
+                    &rdquo;Y\'all need to start Leetcoding&rdquo;
                   </span>
                   <span className="sm:grid sm:mx-auto md:block text-white text-xl">
                     {dishonored}
