@@ -11,7 +11,7 @@ import {
   BanIcon,
   StarIcon,
   LightningBoltIcon,
-  PlusIcon,
+  MinusIcon,
 } from "@heroicons/react/outline";
 import { data } from "autoprefixer";
 
@@ -52,6 +52,12 @@ export default function Home({ array, easies, meds, hards, revlead }) {
   console.log(arrayNames);
   console.log(revlead);
   console.log(array);
+
+  let dishonored = "";
+  for (let i = 10; i < array.length; i++) {
+    dishonored += people[arrayNames[i]] + ", ";
+  }
+  console.log(dishonored);
 
   // Dictonary of leaderboard
   const ranks = [
@@ -271,16 +277,37 @@ export default function Home({ array, easies, meds, hards, revlead }) {
                   Hard: {rank.hards}
                 </p>
               </div>
-              <div className="order-2 flex-shrink-0 sm:order-3 sm:ml-3">
-                <button
-                  type="button"
-                  className="-mr-1 flex p-2 rounded-md hover:bg-indigo-500 focus:outline-none focus:ring-2 focus:ring-white sm:-mr-2"
-                ></button>
-              </div>
             </div>
           </div>
         </div>
       ))}
+      <div className="hover:shadow-xl hover:shadow-amber-500 bg-gradient-to-r from-cyan-600 to-indigo-500 mb-8 mt-8 sm:mx-14 md:mx-24 rounded-md">
+        <div className="max-w-7xl mx-auto py-3 px-3 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between flex-wrap">
+            <div className="w-0 flex-1 flex items-center">
+              <span className="flex p-2 rounded-lg bg-amber-500">
+                <MinusIcon
+                  className="h-10 w-10 text-white"
+                  aria-hidden="true"
+                />
+              </span>
+              <div className="ml-3 font-medium text-white truncate">
+                <span className="sm:grid sm:mx-auto md:block text-3xl bold">
+                  Dishonorable Mentions
+                </span>
+                <p className="ml-3 font-light truncate">
+                  <span className="hidden sm:grid sm:mx-auto md:block font-medium text-yellow-500 text-xl">
+                    "Y'all Gotta Start Leetcoding"
+                  </span>
+                  <span className="sm:grid sm:mx-auto md:block text-white text-xl">
+                    {dishonored}
+                  </span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
