@@ -3,7 +3,6 @@ import Image from "next/image";
 import styles from "../styles/Home.module.css";
 import react from "react";
 import { ApolloClient, InMemoryCache, gql } from "@apollo/client";
-import { SpeakerphoneIcon, XIcon } from "@heroicons/react/outline";
 import {
   ThumbDownIcon,
   QuestionMarkCircleIcon,
@@ -528,6 +527,8 @@ export async function getStaticProps({}) {
     dict2[key].push(data.matchedUser.username);
   }
 
+  console.log("here");
+
   //returning the dictonaries
   return {
     props: {
@@ -537,5 +538,6 @@ export async function getStaticProps({}) {
       hards: hard,
       revlead: dict2,
     },
+    revalidate: 10,
   };
 }
