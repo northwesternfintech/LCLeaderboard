@@ -38,6 +38,7 @@ export default function Home({ array, easies, meds, hards, revlead }) {
     Amiin5: "Amiin Muse",
     thebarberthief: "Louis Gabison",
     PeterL712: "Peter Lau",
+    aromanenko1: "Alex Romaneko",
   };
 
   let separation = Object.entries(revlead);
@@ -490,6 +491,20 @@ export async function getStaticProps({}) {
         }
       }
     `,
+    gql`
+      query Profile {
+        matchedUser(username: "aromanenko1") {
+          username
+          submitStats: submitStatsGlobal {
+            acSubmissionNum {
+              difficulty
+              count
+              submissions
+            }
+          }
+        }
+      }
+    `,
   ];
 
   // Dictionaries to store data
@@ -507,6 +522,7 @@ export async function getStaticProps({}) {
     Yetermin8: 0,
     Amiin5: 0,
     PeterL712: 0,
+    aromanenko1: 0,
   };
   let med = {
     echavemann: 0,
@@ -520,6 +536,7 @@ export async function getStaticProps({}) {
     Yetermin8: 0,
     Amiin5: 0,
     PeterL712: 0,
+    aromanenko1: 0,
   };
   let hard = {
     echavemann: 0,
@@ -534,6 +551,7 @@ export async function getStaticProps({}) {
     Amiin5: 0,
     thebarberthief: 0,
     PeterL712: 0,
+    aromanenko1: 0,
   };
 
   // Loop to store data of each query
@@ -554,8 +572,6 @@ export async function getStaticProps({}) {
     }
     dict2[key].push(data.matchedUser.username);
   }
-
-  console.log("here");
 
   //returning the dictonaries
   return {
