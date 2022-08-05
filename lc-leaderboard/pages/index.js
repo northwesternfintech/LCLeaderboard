@@ -51,6 +51,8 @@ export default function Home({ array, easies, meds, hards, revlead }) {
 
   arrayNames.reverse();
   console.log(arrayNames);
+  console.log(revlead);
+  console.log(array);
 
   // Dictonary of leaderboard
   const ranks = [
