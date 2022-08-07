@@ -38,7 +38,7 @@ export default function Home({ array, easies, meds, hards, revlead }) {
     Amiin5: "Amiin Muse",
     thebarberthief: "Louis Gabison",
     PeterL712: "Peter Lau",
-    aromanenko1: "Alex Romaneko",
+    aromanenko1: "Alex Romanenko",
   };
 
   let separation = Object.entries(revlead);
