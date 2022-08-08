@@ -39,6 +39,7 @@ export default function Home({ array, easies, meds, hards, revlead }) {
     thebarberthief: "Louis Gabison",
     PeterL712: "Peter Lau",
     aromanenko1: "Alex Romaneko",
+    LCMarko: "Marko Veljanovski",
   };
 
   let separation = Object.entries(revlead);
@@ -517,6 +518,20 @@ export async function getStaticProps({}) {
         }
       }
     `,
+    gql`
+    query Profile {
+      matchedUser(username: "LCMarko") {
+        username
+        submitStats: submitStatsGlobal {
+          acSubmissionNum {
+            difficulty
+            count
+            submissions
+          }
+        }
+      }
+    }
+  `,
   ];
 
   // Dictionaries to store data
@@ -535,6 +550,7 @@ export async function getStaticProps({}) {
     Amiin5: 0,
     PeterL712: 0,
     aromanenko1: 0,
+    LCMarko:0,
   };
   let med = {
     echavemann: 0,
@@ -549,6 +565,7 @@ export async function getStaticProps({}) {
     Amiin5: 0,
     PeterL712: 0,
     aromanenko1: 0,
+    LCMarko:0 ,
   };
   let hard = {
     echavemann: 0,
@@ -564,6 +581,7 @@ export async function getStaticProps({}) {
     thebarberthief: 0,
     PeterL712: 0,
     aromanenko1: 0,
+    LCMarko: 0,
   };
 
   // Loop to store data of each query
