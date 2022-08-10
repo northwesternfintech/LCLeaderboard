@@ -12,6 +12,9 @@ import {
   StarIcon,
   LightningBoltIcon,
   MinusIcon,
+  TrashIcon,
+  UserRemoveIcon,
+  TrendingUpIcon,
 } from "@heroicons/react/outline";
 import { data } from "autoprefixer";
 
@@ -142,7 +145,7 @@ export default function Home({ array, easies, meds, hards, revlead }) {
         arrayNames[4] +
         "&theme=Dark",
       profile: "https://leetcode.com/" + arrayNames[4],
-      icon: FastForwardIcon,
+      icon: TrendingUpIcon,
     },
     {
       place: "#6",
@@ -174,7 +177,7 @@ export default function Home({ array, easies, meds, hards, revlead }) {
         arrayNames[6] +
         "&theme=Dark",
       profile: "https://leetcode.com/" + arrayNames[6],
-      icon: QuestionMarkCircleIcon,
+      icon: ThumbDownIcon,
     },
     {
       place: "#8",
@@ -190,7 +193,7 @@ export default function Home({ array, easies, meds, hards, revlead }) {
         arrayNames[7] +
         "&theme=Dark",
       profile: "https://leetcode.com/" + arrayNames[7],
-      icon: ThumbDownIcon,
+      icon: UserRemoveIcon,
     },
     {
       place: "#9",
@@ -206,7 +209,7 @@ export default function Home({ array, easies, meds, hards, revlead }) {
         arrayNames[8] +
         "&theme=Dark",
       profile: "https://leetcode.com/" + arrayNames[8],
-      icon: ThumbDownIcon,
+      icon: BanIcon,
     },
     {
       place: "#10",
@@ -222,7 +225,7 @@ export default function Home({ array, easies, meds, hards, revlead }) {
         arrayNames[9] +
         "&theme=Dark",
       profile: "https://leetcode.com/" + arrayNames[9],
-      icon: BanIcon,
+      icon: TrashIcon,
     },
   ];
 
