@@ -44,6 +44,7 @@ export default function Home({ array, easies, meds, hards, revlead }) {
     aromanenko1: "Alex Romanenko",
     LCMarko: "Marko Veljanovski",
     lemat42: "Gary Chen",
+    boxable: "Natalie Hill",
   };
 
   let separation = Object.entries(revlead);
@@ -550,6 +551,20 @@ export async function getStaticProps({}) {
         }
       }
     `,
+    gql`
+      query Profile {
+        matchedUser(username: "boxable") {
+          username
+          submitStats: submitStatsGlobal {
+            acSubmissionNum {
+              difficulty
+              count
+              submissions
+            }
+          }
+        }
+      }
+    `,
   ];
 
   // Dictionaries to store data
@@ -570,6 +585,7 @@ export async function getStaticProps({}) {
     aromanenko1: 0,
     LCMarko: 0,
     lemat42: 0,
+    boxable: 0,
   };
   let med = {
     echavemann: 0,
@@ -586,6 +602,7 @@ export async function getStaticProps({}) {
     aromanenko1: 0,
     LCMarko: 0,
     lemat42: 0,
+    boxable: 0,
   };
   let hard = {
     echavemann: 0,
@@ -603,6 +620,7 @@ export async function getStaticProps({}) {
     aromanenko1: 0,
     LCMarko: 0,
     lemat42: 0,
+    boxable: 0,
   };
 
   // Loop to store data of each query
