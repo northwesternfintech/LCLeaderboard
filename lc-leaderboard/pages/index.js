@@ -64,7 +64,7 @@ export default function Home({ array, easies, meds, hards, revlead }) {
   for (let i = 10; i < array.length; i++) {
     dishonored += people[arrayNames[i]] + ", ";
   }
-    dishonored = dishonored.slice(0,-1);
+  dishonored = dishonored.slice(0,-1);
   console.log(dishonored);
 
   // Dictonary of leaderboard
