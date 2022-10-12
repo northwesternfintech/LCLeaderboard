@@ -19,8 +19,8 @@ import {
   AcademicCapIcon,
   ChevronDoubleDownIcon,
   EmojiSadIcon,
-  OutlineTrendingDownIcon,
-  OutlineXCircleIcon,
+  TrendingDownIcon,
+  XCircleIcon,
   ChevronDownIcon,
   ExclamationIcon,
   SwitchVerticalIcon,
@@ -254,7 +254,7 @@ export default function Home({ array, easies, meds, hards, revlead }) {
         arrayNames[8] +
         "&theme=Dark",
       profile: "https://leetcode.com/" + arrayNames[8],
-      icon: BanIcon,
+      icon: ChevronDoubleDownIcon,
     },
     {
       place: "#10",
@@ -286,7 +286,7 @@ export default function Home({ array, easies, meds, hards, revlead }) {
         arrayNames[10] +
         "&theme=Dark",
       profile: "https://leetcode.com/" + arrayNames[10],
-      icon: TrashIcon,
+      icon: ArrowSmDownIcon,
     },
     {
       place: "#12",
@@ -302,7 +302,7 @@ export default function Home({ array, easies, meds, hards, revlead }) {
         arrayNames[11] +
         "&theme=Dark",
       profile: "https://leetcode.com/" + arrayNames[11],
-      icon: TrashIcon,
+      icon: ThumbDownIcon,
     },
     {
       place: "#13",
@@ -318,7 +318,7 @@ export default function Home({ array, easies, meds, hards, revlead }) {
         arrayNames[12] +
         "&theme=Dark",
       profile: "https://leetcode.com/" + arrayNames[12],
-      icon: TrashIcon,
+      icon: QuestionMarkCircleIcon,
     },
     {
       place: "#14",
@@ -334,7 +334,7 @@ export default function Home({ array, easies, meds, hards, revlead }) {
         arrayNames[13] +
         "&theme=Dark",
       profile: "https://leetcode.com/" + arrayNames[13],
-      icon: TrashIcon,
+      icon: MinusIcon,
     },
     {
       place: "#15",
@@ -350,7 +350,7 @@ export default function Home({ array, easies, meds, hards, revlead }) {
         arrayNames[14] +
         "&theme=Dark",
       profile: "https://leetcode.com/" + arrayNames[14],
-      icon: TrashIcon,
+      icon: EmojiSadIcon,
     },
     {
       place: "#16",
@@ -366,7 +366,7 @@ export default function Home({ array, easies, meds, hards, revlead }) {
         arrayNames[15] +
         "&theme=Dark",
       profile: "https://leetcode.com/" + arrayNames[15],
-      icon: TrashIcon,
+      icon: ExclamationIcon,
     },
     {
       place: "#17",
@@ -382,7 +382,7 @@ export default function Home({ array, easies, meds, hards, revlead }) {
         arrayNames[16] +
         "&theme=Dark",
       profile: "https://leetcode.com/" + arrayNames[16],
-      icon: TrashIcon,
+      icon: XCircleIcon,
     },
     {
       place: "#18",
@@ -398,7 +398,7 @@ export default function Home({ array, easies, meds, hards, revlead }) {
         arrayNames[17] +
         "&theme=Dark",
       profile: "https://leetcode.com/" + arrayNames[17],
-      icon: TrashIcon,
+      icon: UserRemoveIcon,
     },
     {
       place: "#19",
@@ -414,7 +414,7 @@ export default function Home({ array, easies, meds, hards, revlead }) {
         arrayNames[18] +
         "&theme=Dark",
       profile: "https://leetcode.com/" + arrayNames[18],
-      icon: TrashIcon,
+      icon: BanIcon,
     },
     {
       place: "#20",
