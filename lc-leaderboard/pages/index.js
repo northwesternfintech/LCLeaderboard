@@ -71,7 +71,6 @@ export default function Home({ array, easies, meds, hards, revlead }) {
     tahiragrewal: "Tahira Grewal",
     teapott: "Tommy Pottinger",
     clnaing23: "Chris Naing",
-    vgg7111: "Varun Goel",
     eel_mas: "Samuel Lee",
     kierthan42: "Kierthan Lathrop",
     williamhe23: "William He",
@@ -95,7 +94,7 @@ export default function Home({ array, easies, meds, hards, revlead }) {
   console.log(array);
 
   let dishonored = "";
-  for (let i = 10; i < array.length; i++) {
+  for (let i = 15; i < array.length; i++) {
     dishonored += people[arrayNames[i]] + ", ";
   }
   console.log(dishonored);
@@ -357,7 +356,7 @@ export default function Home({ array, easies, meds, hards, revlead }) {
           </a>
         </button>
         <div className="grid place-items-center align-middle text-center text-xl pt-6 font-light text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-white">
-          <h1>Rank based on # of questions completed</h1>
+          <h1>Rank based on Leetcode Ranking</h1>
         </div>
       </div>
 
@@ -424,11 +423,11 @@ export default function Home({ array, easies, meds, hards, revlead }) {
                   aria-hidden="true"
                 />
               </span>
-              <div className="ml-3 font-medium text-white truncate">
+              <div className="ml-3 font-medium text-white">
                 <span className="sm:grid sm:mx-auto md:block text-3xl bold">
                   Dishonorable Mentions
                 </span>
-                <p className="ml-3 font-light truncate">
+                <p className="ml-3 font-light">
                   <span className="hidden sm:grid sm:mx-auto md:block font-medium text-yellow-500 text-xl">
                     {" "}
                     &rdquo;Y&apos;all need to start Leetcoding&rdquo;
@@ -1059,20 +1058,6 @@ export async function getStaticProps({}) {
     `,
     gql`
       query Profile {
-        matchedUser(username: "vgg7111") {
-          username
-          submitStats: submitStatsGlobal {
-            acSubmissionNum {
-              difficulty
-              count
-              submissions
-            }
-          }
-        }
-      }
-    `,
-    gql`
-      query Profile {
         matchedUser(username: "eel_mas") {
           username
           submitStats: submitStatsGlobal {
@@ -1203,7 +1188,6 @@ export async function getStaticProps({}) {
     teapott: 0,
     clnaing23: 0,
     Grumjug: 0,
-    vgg7111: 0,
     eel_mas: 0,
     kierthan42: 0,
     williamhe23: 0,
@@ -1254,7 +1238,6 @@ export async function getStaticProps({}) {
     teapott: 0,
     clnaing23: 0,
     Grumjug: 0,
-    vgg7111: 0,
     eel_mas: 0,
     kierthan42: 0,
     williamhe23: 0,
@@ -1306,7 +1289,6 @@ export async function getStaticProps({}) {
     teapott: 0,
     clnaing23: 0,
     Grumjug: 0,
-    vgg7111: 0,
     eel_mas: 0,
     kierthan42: 0,
     williamhe23: 0,
