@@ -238,7 +238,7 @@ export default function Home({ array, easies, meds, hards, revlead }) {
         arrayNames[7] +
         "&theme=Dark",
       profile: "https://leetcode.com/" + arrayNames[7],
-      icon: UserRemoveIcon,
+      icon: ChevronDownIcon,
     },
     {
       place: "#9",
