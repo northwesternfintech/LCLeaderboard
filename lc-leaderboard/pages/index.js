@@ -15,6 +15,15 @@ import {
   TrashIcon,
   UserRemoveIcon,
   TrendingUpIcon,
+  ArrowSmDownIcon,
+  AcademicCapIcon,
+  ChevronDoubleDownIcon,
+  EmojiSadIcon,
+  OutlineTrendingDownIcon,
+  OutlineXCircleIcon,
+  ChevronDownIcon,
+  ExclamationIcon,
+  SwitchVerticalIcon,
 } from "@heroicons/react/outline";
 import { data } from "autoprefixer";
 
@@ -149,7 +158,7 @@ export default function Home({ array, easies, meds, hards, revlead }) {
         arrayNames[2] +
         "&theme=Dark",
       profile: "https://leetcode.com/" + arrayNames[2],
-      icon: LightningBoltIcon,
+      icon: AcademicCapIcon,
     },
     {
       place: "#4",
@@ -165,7 +174,7 @@ export default function Home({ array, easies, meds, hards, revlead }) {
         arrayNames[3] +
         "&theme=Dark",
       profile: "https://leetcode.com/" + arrayNames[3],
-      icon: FastForwardIcon,
+      icon: LightningBoltIcon,
     },
     {
       place: "#5",
@@ -187,7 +196,7 @@ export default function Home({ array, easies, meds, hards, revlead }) {
       place: "#6",
       name: arrayNames[5],
       realname: people[arrayNames[5]],
-      description: "Start Grinding Bro",
+      description: "Gotta work harder",
       count: array[5],
       easies: easies[arrayNames[5]],
       meds: meds[arrayNames[5]],
@@ -197,7 +206,7 @@ export default function Home({ array, easies, meds, hards, revlead }) {
         arrayNames[5] +
         "&theme=Dark",
       profile: "https://leetcode.com/" + arrayNames[5],
-      icon: QuestionMarkCircleIcon,
+      icon: FastForwardIcon,
     },
     {
       place: "#7",
@@ -213,7 +222,7 @@ export default function Home({ array, easies, meds, hards, revlead }) {
         arrayNames[6] +
         "&theme=Dark",
       profile: "https://leetcode.com/" + arrayNames[6],
-      icon: ThumbDownIcon,
+      icon: TrendingDownIcon,
     },
     {
       place: "#8",
@@ -235,7 +244,7 @@ export default function Home({ array, easies, meds, hards, revlead }) {
       place: "#9",
       name: arrayNames[8],
       realname: people[arrayNames[8]],
-      description: "Road to retail",
+      description: "Road to the bottom",
       count: array[8],
       easies: easies[arrayNames[8]],
       meds: meds[arrayNames[8]],
@@ -261,7 +270,7 @@ export default function Home({ array, easies, meds, hards, revlead }) {
         arrayNames[9] +
         "&theme=Dark",
       profile: "https://leetcode.com/" + arrayNames[9],
-      icon: TrashIcon,
+      icon: SwitchVerticalIcon,
     },
     {
       place: "#11",
@@ -299,7 +308,7 @@ export default function Home({ array, easies, meds, hards, revlead }) {
       place: "#13",
       name: arrayNames[12],
       realname: people[arrayNames[12]],
-      description: "How are you down here bro",
+      description: "How are you down here?",
       count: array[12],
       easies: easies[arrayNames[12]],
       meds: meds[arrayNames[12]],
