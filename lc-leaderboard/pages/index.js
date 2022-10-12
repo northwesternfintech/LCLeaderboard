@@ -98,7 +98,7 @@ export default function Home({ array, easies, meds, hards, revlead }) {
   for (let i = 20; i < array.length; i++) {
     dishonored += people[arrayNames[i]] + ", ";
   }
-  dishonored = dishonored.slice(0,-2);
+  dishonored = dishonored.slice(0, -2);
   console.log(dishonored);
 
   // Dictonary of leaderboard
@@ -411,7 +411,7 @@ export default function Home({ array, easies, meds, hards, revlead }) {
       place: "#20",
       name: arrayNames[19],
       realname: people[arrayNames[19]],
-      description: "Borderline",
+      description: "Yikes",
       count: array[19],
       easies: easies[arrayNames[19]],
       meds: meds[arrayNames[19]],
@@ -507,7 +507,7 @@ export default function Home({ array, easies, meds, hards, revlead }) {
               </span>
               <div className="ml-3 font-medium text-white">
                 <span className="sm:grid sm:mx-auto md:block text-3xl bold">
-                  Dishonorable Mentions
+                  Dishonorable Mentions (Ordered)
                 </span>
                 <p className="ml-3 font-light">
                   <span className="hidden sm:grid sm:mx-auto md:block font-medium text-yellow-500 text-xl">
