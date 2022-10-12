@@ -77,7 +77,8 @@ export default function Home({ array, easies, meds, hards, revlead }) {
     jeshuica: "Jessica Guo",
     ICET2003: "IceT T.",
     mitchelllai: "Mitchell Lai",
-    Grumjug: "Liam Jackson",
+    grumjug: "Liam Jackson",
+    miyayq36: "Miya Liu",
   };
 
   let separation = Object.entries(revlead);
@@ -94,7 +95,7 @@ export default function Home({ array, easies, meds, hards, revlead }) {
   console.log(array);
 
   let dishonored = "";
-  for (let i = 15; i < array.length; i++) {
+  for (let i = 20; i < array.length; i++) {
     dishonored += people[arrayNames[i]] + ", ";
   }
   console.log(dishonored);
@@ -281,7 +282,7 @@ export default function Home({ array, easies, meds, hards, revlead }) {
       place: "#12",
       name: arrayNames[11],
       realname: people[arrayNames[11]],
-      description: "Even further down the line",
+      description: "Wait theres more??",
       count: array[11],
       easies: easies[arrayNames[11]],
       meds: meds[arrayNames[11]],
@@ -297,7 +298,7 @@ export default function Home({ array, easies, meds, hards, revlead }) {
       place: "#13",
       name: arrayNames[12],
       realname: people[arrayNames[12]],
-      description: "Even further down the line",
+      description: "How are you down here bro",
       count: array[12],
       easies: easies[arrayNames[12]],
       meds: meds[arrayNames[12]],
@@ -313,7 +314,7 @@ export default function Home({ array, easies, meds, hards, revlead }) {
       place: "#14",
       name: arrayNames[13],
       realname: people[arrayNames[13]],
-      description: "Even further down the line",
+      description: "The list goes down this far?",
       count: array[13],
       easies: easies[arrayNames[13]],
       meds: meds[arrayNames[13]],
@@ -329,7 +330,7 @@ export default function Home({ array, easies, meds, hards, revlead }) {
       place: "#15",
       name: arrayNames[14],
       realname: people[arrayNames[14]],
-      description: "Even further down the line",
+      description: "Might be tough reaching the top",
       count: array[14],
       easies: easies[arrayNames[14]],
       meds: meds[arrayNames[14]],
@@ -339,6 +340,86 @@ export default function Home({ array, easies, meds, hards, revlead }) {
         arrayNames[14] +
         "&theme=Dark",
       profile: "https://leetcode.com/" + arrayNames[14],
+      icon: TrashIcon,
+    },
+    {
+      place: "#16",
+      name: arrayNames[15],
+      realname: people[arrayNames[15]],
+      description: "It's a long way down",
+      count: array[15],
+      easies: easies[arrayNames[15]],
+      meds: meds[arrayNames[15]],
+      hards: hards[arrayNames[15]],
+      link:
+        "https://leetcode-stats.vercel.app/api?username=" +
+        arrayNames[15] +
+        "&theme=Dark",
+      profile: "https://leetcode.com/" + arrayNames[15],
+      icon: TrashIcon,
+    },
+    {
+      place: "#17",
+      name: arrayNames[16],
+      realname: people[arrayNames[16]],
+      description: "Maybe try a little harder",
+      count: array[16],
+      easies: easies[arrayNames[16]],
+      meds: meds[arrayNames[16]],
+      hards: hards[arrayNames[16]],
+      link:
+        "https://leetcode-stats.vercel.app/api?username=" +
+        arrayNames[16] +
+        "&theme=Dark",
+      profile: "https://leetcode.com/" + arrayNames[16],
+      icon: TrashIcon,
+    },
+    {
+      place: "#18",
+      name: arrayNames[17],
+      realname: people[arrayNames[17]],
+      description: "At least you're on the list",
+      count: array[17],
+      easies: easies[arrayNames[17]],
+      meds: meds[arrayNames[17]],
+      hards: hards[arrayNames[17]],
+      link:
+        "https://leetcode-stats.vercel.app/api?username=" +
+        arrayNames[17] +
+        "&theme=Dark",
+      profile: "https://leetcode.com/" + arrayNames[17],
+      icon: TrashIcon,
+    },
+    {
+      place: "#19",
+      name: arrayNames[18],
+      realname: people[arrayNames[18]],
+      description: "At least you're not last",
+      count: array[18],
+      easies: easies[arrayNames[18]],
+      meds: meds[arrayNames[18]],
+      hards: hards[arrayNames[18]],
+      link:
+        "https://leetcode-stats.vercel.app/api?username=" +
+        arrayNames[18] +
+        "&theme=Dark",
+      profile: "https://leetcode.com/" + arrayNames[18],
+      icon: TrashIcon,
+    },
+    {
+      place: "#20",
+      name: arrayNames[19],
+      realname: people[arrayNames[19]],
+      description: "Borderline",
+      count: array[19],
+      easies: easies[arrayNames[19]],
+      meds: meds[arrayNames[19]],
+      hards: hards[arrayNames[19]],
+      link:
+        "https://leetcode-stats.vercel.app/api?username=" +
+        arrayNames[19] +
+        "&theme=Dark",
+      profile: "https://leetcode.com/" + arrayNames[19],
       icon: TrashIcon,
     },
   ];
@@ -1044,7 +1125,7 @@ export async function getStaticProps({}) {
     `,
     gql`
       query Profile {
-        matchedUser(username: "Grumjug") {
+        matchedUser(username: "grumjug") {
           username
           submitStats: submitStatsGlobal {
             acSubmissionNum {
@@ -1140,6 +1221,20 @@ export async function getStaticProps({}) {
         }
       }
     `,
+    gql`
+      query Profile {
+        matchedUser(username: "miyayq36") {
+          username
+          submitStats: submitStatsGlobal {
+            acSubmissionNum {
+              difficulty
+              count
+              submissions
+            }
+          }
+        }
+      }
+    `,
   ];
 
   // Dictionaries to store data
@@ -1187,13 +1282,14 @@ export async function getStaticProps({}) {
     tahiragrewal: 0,
     teapott: 0,
     clnaing23: 0,
-    Grumjug: 0,
+    grumjug: 0,
     eel_mas: 0,
     kierthan42: 0,
     williamhe23: 0,
     jeshuica: 0,
     ICET2003: 0,
     mitchelllai: 0,
+    miyayq36: 0,
   };
   let med = {
     echavemann: 0,
@@ -1237,13 +1333,14 @@ export async function getStaticProps({}) {
     tahiragrewal: 0,
     teapott: 0,
     clnaing23: 0,
-    Grumjug: 0,
+    grumjug: 0,
     eel_mas: 0,
     kierthan42: 0,
     williamhe23: 0,
     jeshuica: 0,
     ICET2003: 0,
     mitchelllai: 0,
+    miyayq36: 0,
   };
   let hard = {
     echavemann: 0,
@@ -1288,13 +1385,14 @@ export async function getStaticProps({}) {
     tahiragrewal: 0,
     teapott: 0,
     clnaing23: 0,
-    Grumjug: 0,
+    grumjug: 0,
     eel_mas: 0,
     kierthan42: 0,
     williamhe23: 0,
     jeshuica: 0,
     ICET2003: 0,
     mitchelllai: 0,
+    miyayq36: 0,
   };
 
   // Loop to store data of each query
