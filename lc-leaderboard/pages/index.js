@@ -679,6 +679,482 @@ export async function getStaticProps({}) {
         }
       }
     `,
+    gql`
+      query Profile {
+        matchedUser(username: "jhan5") {
+          username
+          submitStats: submitStatsGlobal {
+            acSubmissionNum {
+              difficulty
+              count
+              submissions
+            }
+          }
+        }
+      }
+    `,
+    gql`
+      query Profile {
+        matchedUser(username: "minnce") {
+          username
+          submitStats: submitStatsGlobal {
+            acSubmissionNum {
+              difficulty
+              count
+              submissions
+            }
+          }
+        }
+      }
+    `,
+    gql`
+      query Profile {
+        matchedUser(username: "andli06") {
+          username
+          submitStats: submitStatsGlobal {
+            acSubmissionNum {
+              difficulty
+              count
+              submissions
+            }
+          }
+        }
+      }
+    `,
+    gql`
+      query Profile {
+        matchedUser(username: "jingyangc") {
+          username
+          submitStats: submitStatsGlobal {
+            acSubmissionNum {
+              difficulty
+              count
+              submissions
+            }
+          }
+        }
+      }
+    `,
+    gql`
+      query Profile {
+        matchedUser(username: "ElysiaL528") {
+          username
+          submitStats: submitStatsGlobal {
+            acSubmissionNum {
+              difficulty
+              count
+              submissions
+            }
+          }
+        }
+      }
+    `,
+    gql`
+      query Profile {
+        matchedUser(username: "spi2026nu") {
+          username
+          submitStats: submitStatsGlobal {
+            acSubmissionNum {
+              difficulty
+              count
+              submissions
+            }
+          }
+        }
+      }
+    `,
+    gql`
+      query Profile {
+        matchedUser(username: "izh_17") {
+          username
+          submitStats: submitStatsGlobal {
+            acSubmissionNum {
+              difficulty
+              count
+              submissions
+            }
+          }
+        }
+      }
+    `,
+    gql`
+      query Profile {
+        matchedUser(username: "onecholas") {
+          username
+          submitStats: submitStatsGlobal {
+            acSubmissionNum {
+              difficulty
+              count
+              submissions
+            }
+          }
+        }
+      }
+    `,
+    gql`
+      query Profile {
+        matchedUser(username: "shahdev212") {
+          username
+          submitStats: submitStatsGlobal {
+            acSubmissionNum {
+              difficulty
+              count
+              submissions
+            }
+          }
+        }
+      }
+    `,
+    gql`
+      query Profile {
+        matchedUser(username: "arianapineda") {
+          username
+          submitStats: submitStatsGlobal {
+            acSubmissionNum {
+              difficulty
+              count
+              submissions
+            }
+          }
+        }
+      }
+    `,
+    gql`
+      query Profile {
+        matchedUser(username: "belakey") {
+          username
+          submitStats: submitStatsGlobal {
+            acSubmissionNum {
+              difficulty
+              count
+              submissions
+            }
+          }
+        }
+      }
+    `,
+    gql`
+      query Profile {
+        matchedUser(username: "Astronicus") {
+          username
+          submitStats: submitStatsGlobal {
+            acSubmissionNum {
+              difficulty
+              count
+              submissions
+            }
+          }
+        }
+      }
+    `,
+    gql`
+      query Profile {
+        matchedUser(username: "hongzhou2025") {
+          username
+          submitStats: submitStatsGlobal {
+            acSubmissionNum {
+              difficulty
+              count
+              submissions
+            }
+          }
+        }
+      }
+    `,
+    gql`
+      query Profile {
+        matchedUser(username: "richard-lam") {
+          username
+          submitStats: submitStatsGlobal {
+            acSubmissionNum {
+              difficulty
+              count
+              submissions
+            }
+          }
+        }
+      }
+    `,
+    gql`
+      query Profile {
+        matchedUser(username: "jayhoonpark") {
+          username
+          submitStats: submitStatsGlobal {
+            acSubmissionNum {
+              difficulty
+              count
+              submissions
+            }
+          }
+        }
+      }
+    `,
+    gql`
+      query Profile {
+        matchedUser(username: "meenazoks") {
+          username
+          submitStats: submitStatsGlobal {
+            acSubmissionNum {
+              difficulty
+              count
+              submissions
+            }
+          }
+        }
+      }
+    `,
+    gql`
+      query Profile {
+        matchedUser(username: "dsl03") {
+          username
+          submitStats: submitStatsGlobal {
+            acSubmissionNum {
+              difficulty
+              count
+              submissions
+            }
+          }
+        }
+      }
+    `,
+    gql`
+      query Profile {
+        matchedUser(username: "akashvshroff") {
+          username
+          submitStats: submitStatsGlobal {
+            acSubmissionNum {
+              difficulty
+              count
+              submissions
+            }
+          }
+        }
+      }
+    `,
+    gql`
+      query Profile {
+        matchedUser(username: "yenroger2002") {
+          username
+          submitStats: submitStatsGlobal {
+            acSubmissionNum {
+              difficulty
+              count
+              submissions
+            }
+          }
+        }
+      }
+    `,
+    gql`
+      query Profile {
+        matchedUser(username: "10cirenehc") {
+          username
+          submitStats: submitStatsGlobal {
+            acSubmissionNum {
+              difficulty
+              count
+              submissions
+            }
+          }
+        }
+      }
+    `,
+    gql`
+      query Profile {
+        matchedUser(username: "brennanbenson2025") {
+          username
+          submitStats: submitStatsGlobal {
+            acSubmissionNum {
+              difficulty
+              count
+              submissions
+            }
+          }
+        }
+      }
+    `,
+    gql`
+      query Profile {
+        matchedUser(username: "kliu3638") {
+          username
+          submitStats: submitStatsGlobal {
+            acSubmissionNum {
+              difficulty
+              count
+              submissions
+            }
+          }
+        }
+      }
+    `,
+    gql`
+      query Profile {
+        matchedUser(username: "Eugeniacao_") {
+          username
+          submitStats: submitStatsGlobal {
+            acSubmissionNum {
+              difficulty
+              count
+              submissions
+            }
+          }
+        }
+      }
+    `,
+    gql`
+      query Profile {
+        matchedUser(username: "tahiragrewal") {
+          username
+          submitStats: submitStatsGlobal {
+            acSubmissionNum {
+              difficulty
+              count
+              submissions
+            }
+          }
+        }
+      }
+    `,
+    gql`
+      query Profile {
+        matchedUser(username: "teapott") {
+          username
+          submitStats: submitStatsGlobal {
+            acSubmissionNum {
+              difficulty
+              count
+              submissions
+            }
+          }
+        }
+      }
+    `,
+    gql`
+      query Profile {
+        matchedUser(username: "clnaing23") {
+          username
+          submitStats: submitStatsGlobal {
+            acSubmissionNum {
+              difficulty
+              count
+              submissions
+            }
+          }
+        }
+      }
+    `,
+    gql`
+      query Profile {
+        matchedUser(username: "Grumjug") {
+          username
+          submitStats: submitStatsGlobal {
+            acSubmissionNum {
+              difficulty
+              count
+              submissions
+            }
+          }
+        }
+      }
+    `,
+    gql`
+      query Profile {
+        matchedUser(username: "vgg7111") {
+          username
+          submitStats: submitStatsGlobal {
+            acSubmissionNum {
+              difficulty
+              count
+              submissions
+            }
+          }
+        }
+      }
+    `,
+    gql`
+      query Profile {
+        matchedUser(username: "eel_mas") {
+          username
+          submitStats: submitStatsGlobal {
+            acSubmissionNum {
+              difficulty
+              count
+              submissions
+            }
+          }
+        }
+      }
+    `,
+    gql`
+      query Profile {
+        matchedUser(username: "kierthan42") {
+          username
+          submitStats: submitStatsGlobal {
+            acSubmissionNum {
+              difficulty
+              count
+              submissions
+            }
+          }
+        }
+      }
+    `,
+    gql`
+      query Profile {
+        matchedUser(username: "williamhe23") {
+          username
+          submitStats: submitStatsGlobal {
+            acSubmissionNum {
+              difficulty
+              count
+              submissions
+            }
+          }
+        }
+      }
+    `,
+    gql`
+      query Profile {
+        matchedUser(username: "jeshuica") {
+          username
+          submitStats: submitStatsGlobal {
+            acSubmissionNum {
+              difficulty
+              count
+              submissions
+            }
+          }
+        }
+      }
+    `,
+    gql`
+      query Profile {
+        matchedUser(username: "ICET2003") {
+          username
+          submitStats: submitStatsGlobal {
+            acSubmissionNum {
+              difficulty
+              count
+              submissions
+            }
+          }
+        }
+      }
+    `,
+    gql`
+      query Profile {
+        matchedUser(username: "mitchelllai") {
+          username
+          submitStats: submitStatsGlobal {
+            acSubmissionNum {
+              difficulty
+              count
+              submissions
+            }
+          }
+        }
+      }
+    `,
   ];
 
   // Dictionaries to store data
@@ -700,6 +1176,40 @@ export async function getStaticProps({}) {
     LCMarko: 0,
     lemat42: 0,
     boxable: 0,
+    jhan5: 0,
+    minnce: 0,
+    andli06: 0,
+    jingyangc: 0,
+    ElysiaL528: 0,
+    spi2026nu: 0,
+    izh_17: 0,
+    onecholas: 0,
+    shahdev212: 0,
+    arianapineda: 0,
+    belakey: 0,
+    Astronicus: 0,
+    hongzhou2025: 0,
+    "richard-lam": 0,
+    jayhoonpark: 0,
+    meenazoks: 0,
+    dsl03: 0,
+    akashvshroff: 0,
+    yenroger2002: 0,
+    "10cirenehc": 0,
+    brennanbenson2025: 0,
+    kliu3638: 0,
+    Eugeniacao_: 0,
+    tahiragrewal: 0,
+    teapott: 0,
+    clnaing23: 0,
+    Grumjug: 0,
+    vgg7111: 0,
+    eel_mas: 0,
+    kierthan42: 0,
+    williamhe23: 0,
+    jeshuica: 0,
+    ICET2003: 0,
+    mitchelllai: 0,
   };
   let med = {
     echavemann: 0,
@@ -717,6 +1227,40 @@ export async function getStaticProps({}) {
     LCMarko: 0,
     lemat42: 0,
     boxable: 0,
+    jhan5: 0,
+    minnce: 0,
+    andli06: 0,
+    jingyangc: 0,
+    ElysiaL528: 0,
+    spi2026nu: 0,
+    izh_17: 0,
+    onecholas: 0,
+    shahdev212: 0,
+    arianapineda: 0,
+    belakey: 0,
+    Astronicus: 0,
+    hongzhou2025: 0,
+    "richard-lam": 0,
+    jayhoonpark: 0,
+    meenazoks: 0,
+    dsl03: 0,
+    akashvshroff: 0,
+    yenroger2002: 0,
+    "10cirenehc": 0,
+    brennanbenson2025: 0,
+    kliu3638: 0,
+    Eugeniacao_: 0,
+    tahiragrewal: 0,
+    teapott: 0,
+    clnaing23: 0,
+    Grumjug: 0,
+    vgg7111: 0,
+    eel_mas: 0,
+    kierthan42: 0,
+    williamhe23: 0,
+    jeshuica: 0,
+    ICET2003: 0,
+    mitchelllai: 0,
   };
   let hard = {
     echavemann: 0,
@@ -735,6 +1279,40 @@ export async function getStaticProps({}) {
     LCMarko: 0,
     lemat42: 0,
     boxable: 0,
+    jhan5: 0,
+    minnce: 0,
+    andli06: 0,
+    jingyangc: 0,
+    ElysiaL528: 0,
+    spi2026nu: 0,
+    izh_17: 0,
+    onecholas: 0,
+    shahdev212: 0,
+    arianapineda: 0,
+    belakey: 0,
+    Astronicus: 0,
+    hongzhou2025: 0,
+    "richard-lam": 0,
+    jayhoonpark: 0,
+    meenazoks: 0,
+    dsl03: 0,
+    akashvshroff: 0,
+    yenroger2002: 0,
+    "10cirenehc": 0,
+    brennanbenson2025: 0,
+    kliu3638: 0,
+    Eugeniacao_: 0,
+    tahiragrewal: 0,
+    teapott: 0,
+    clnaing23: 0,
+    Grumjug: 0,
+    vgg7111: 0,
+    eel_mas: 0,
+    kierthan42: 0,
+    williamhe23: 0,
+    jeshuica: 0,
+    ICET2003: 0,
+    mitchelllai: 0,
   };
 
   // Loop to store data of each query
