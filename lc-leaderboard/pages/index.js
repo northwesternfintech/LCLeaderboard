@@ -262,6 +262,86 @@ export default function Home({ array, easies, meds, hards, revlead }) {
       profile: "https://leetcode.com/" + arrayNames[9],
       icon: TrashIcon,
     },
+    {
+      place: "#11",
+      name: arrayNames[10],
+      realname: people[arrayNames[10]],
+      description: "Even further down the line",
+      count: array[10],
+      easies: easies[arrayNames[10]],
+      meds: meds[arrayNames[10]],
+      hards: hards[arrayNames[10]],
+      link:
+        "https://leetcode-stats.vercel.app/api?username=" +
+        arrayNames[10] +
+        "&theme=Dark",
+      profile: "https://leetcode.com/" + arrayNames[10],
+      icon: TrashIcon,
+    },
+    {
+      place: "#12",
+      name: arrayNames[11],
+      realname: people[arrayNames[11]],
+      description: "Even further down the line",
+      count: array[11],
+      easies: easies[arrayNames[11]],
+      meds: meds[arrayNames[11]],
+      hards: hards[arrayNames[11]],
+      link:
+        "https://leetcode-stats.vercel.app/api?username=" +
+        arrayNames[11] +
+        "&theme=Dark",
+      profile: "https://leetcode.com/" + arrayNames[11],
+      icon: TrashIcon,
+    },
+    {
+      place: "#13",
+      name: arrayNames[12],
+      realname: people[arrayNames[12]],
+      description: "Even further down the line",
+      count: array[12],
+      easies: easies[arrayNames[12]],
+      meds: meds[arrayNames[12]],
+      hards: hards[arrayNames[12]],
+      link:
+        "https://leetcode-stats.vercel.app/api?username=" +
+        arrayNames[12] +
+        "&theme=Dark",
+      profile: "https://leetcode.com/" + arrayNames[12],
+      icon: TrashIcon,
+    },
+    {
+      place: "#14",
+      name: arrayNames[13],
+      realname: people[arrayNames[13]],
+      description: "Even further down the line",
+      count: array[13],
+      easies: easies[arrayNames[13]],
+      meds: meds[arrayNames[13]],
+      hards: hards[arrayNames[13]],
+      link:
+        "https://leetcode-stats.vercel.app/api?username=" +
+        arrayNames[13] +
+        "&theme=Dark",
+      profile: "https://leetcode.com/" + arrayNames[13],
+      icon: TrashIcon,
+    },
+    {
+      place: "#15",
+      name: arrayNames[14],
+      realname: people[arrayNames[14]],
+      description: "Even further down the line",
+      count: array[14],
+      easies: easies[arrayNames[14]],
+      meds: meds[arrayNames[14]],
+      hards: hards[arrayNames[14]],
+      link:
+        "https://leetcode-stats.vercel.app/api?username=" +
+        arrayNames[14] +
+        "&theme=Dark",
+      profile: "https://leetcode.com/" + arrayNames[14],
+      icon: TrashIcon,
+    },
   ];
 
   // Returning Front-end
