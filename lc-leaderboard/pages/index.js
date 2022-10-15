@@ -88,6 +88,13 @@ export default function Home({ array, easies, meds, hards, revlead }) {
     mitchelllai: "Mitchell Lai",
     grumjug: "Liam Jackson",
     miyayq36: "Miya Liu",
+    INFINITY5829: "Lucy Beck",
+    cheryllin: "Cheryl Lin",
+    mscarpati: "Mia Scarpati",
+    ZexuanZhou: "Zexuan Zhou",
+    rewong: "Ryan Wong",
+    wcichowski1: "Will Cichowski",
+    stevenewald: "Steve Ewald",
   };
 
   let separation = Object.entries(revlead);
@@ -537,7 +544,7 @@ export default function Home({ array, easies, meds, hards, revlead }) {
 }
 
 // Static Props function to query data on reload
-export async function getStaticProps({}) {
+export async function getServerSideProps({}) {
   const client = new ApolloClient({
     uri: "https://leetcode.com/graphql",
     cache: new InMemoryCache(),
@@ -1433,6 +1440,5 @@ export async function getStaticProps({}) {
       hards: hard,
       revlead: dict2,
     },
-    revalidate: 5,
   };
 }
