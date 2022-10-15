@@ -1252,6 +1252,104 @@ export async function getServerSideProps({}) {
         }
       }
     `,
+    gql`
+      query Profile {
+        matchedUser(username: "INFINITY5829") {
+          username
+          submitStats: submitStatsGlobal {
+            acSubmissionNum {
+              difficulty
+              count
+              submissions
+            }
+          }
+        }
+      }
+    `,
+    gql`
+      query Profile {
+        matchedUser(username: "cheryllin") {
+          username
+          submitStats: submitStatsGlobal {
+            acSubmissionNum {
+              difficulty
+              count
+              submissions
+            }
+          }
+        }
+      }
+    `,
+    gql`
+      query Profile {
+        matchedUser(username: "mscarpati") {
+          username
+          submitStats: submitStatsGlobal {
+            acSubmissionNum {
+              difficulty
+              count
+              submissions
+            }
+          }
+        }
+      }
+    `,
+    gql`
+      query Profile {
+        matchedUser(username: "ZexuanZhou") {
+          username
+          submitStats: submitStatsGlobal {
+            acSubmissionNum {
+              difficulty
+              count
+              submissions
+            }
+          }
+        }
+      }
+    `,
+    gql`
+      query Profile {
+        matchedUser(username: "rewong") {
+          username
+          submitStats: submitStatsGlobal {
+            acSubmissionNum {
+              difficulty
+              count
+              submissions
+            }
+          }
+        }
+      }
+    `,
+    gql`
+      query Profile {
+        matchedUser(username: "wcichowski1") {
+          username
+          submitStats: submitStatsGlobal {
+            acSubmissionNum {
+              difficulty
+              count
+              submissions
+            }
+          }
+        }
+      }
+    `,
+    gql`
+      query Profile {
+        matchedUser(username: "stevenewald") {
+          username
+          submitStats: submitStatsGlobal {
+            acSubmissionNum {
+              difficulty
+              count
+              submissions
+            }
+          }
+        }
+      }
+    `,
   ];
 
   // Dictionaries to store data
@@ -1307,6 +1405,13 @@ export async function getServerSideProps({}) {
     ICET2003: 0,
     mitchelllai: 0,
     miyayq36: 0,
+    INFINITY5829: 0,
+    cheryllin: 0,
+    mscarpati: 0,
+    ZexuanZhou: 0,
+    rewong: 0,
+    wcichowski1: 0,
+    stevenewald: 0,
   };
   let med = {
     echavemann: 0,
@@ -1358,6 +1463,13 @@ export async function getServerSideProps({}) {
     ICET2003: 0,
     mitchelllai: 0,
     miyayq36: 0,
+    INFINITY5829: 0,
+    cheryllin: 0,
+    mscarpati: 0,
+    ZexuanZhou: 0,
+    rewong: 0,
+    wcichowski1: 0,
+    stevenewald: 0,
   };
   let hard = {
     echavemann: 0,
@@ -1410,6 +1522,13 @@ export async function getServerSideProps({}) {
     ICET2003: 0,
     mitchelllai: 0,
     miyayq36: 0,
+    INFINITY5829: 0,
+    cheryllin: 0,
+    mscarpati: 0,
+    ZexuanZhou: 0,
+    rewong: 0,
+    wcichowski1: 0,
+    stevenewald: 0,
   };
 
   // Loop to store data of each query
