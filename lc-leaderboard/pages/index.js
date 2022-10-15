@@ -1559,5 +1559,6 @@ export async function getStaticProps({}) {
       hards: hard,
       revlead: dict2,
     },
+    revalidate: 1,
   };
 }
