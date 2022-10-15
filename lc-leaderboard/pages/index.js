@@ -544,7 +544,7 @@ export default function Home({ array, easies, meds, hards, revlead }) {
 }
 
 // Static Props function to query data on reload
-export async function getServerSideProps({}) {
+export async function getStaticProps({}) {
   const client = new ApolloClient({
     uri: "https://leetcode.com/graphql",
     cache: new InMemoryCache(),
