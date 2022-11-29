@@ -95,6 +95,7 @@ export default function Home({ array, easies, meds, hards, revlead }) {
     rewong: "Ryan Wong",
     wcichowski1: "Will Cichowski",
     stevenewald: "Steve Ewald",
+    gebrido: "George Bian",
   };
 
   let separation = Object.entries(revlead);
@@ -1350,6 +1351,20 @@ export async function getStaticProps({}) {
         }
       }
     `,
+    gql`
+      query Profile {
+        matchedUser(username: "gebrido") {
+          username
+          submitStats: submitStatsGlobal {
+            acSubmissionNum {
+              difficulty
+              count
+              submissions
+            }
+          }
+        }
+      }
+    `,
   ];
 
   // Dictionaries to store data
@@ -1412,6 +1427,7 @@ export async function getStaticProps({}) {
     rewong: 0,
     wcichowski1: 0,
     stevenewald: 0,
+    gebrido: 0,
   };
   let med = {
     echavemann: 0,
@@ -1470,6 +1486,7 @@ export async function getStaticProps({}) {
     rewong: 0,
     wcichowski1: 0,
     stevenewald: 0,
+    gebrido: 0,
   };
   let hard = {
     echavemann: 0,
@@ -1529,6 +1546,7 @@ export async function getStaticProps({}) {
     rewong: 0,
     wcichowski1: 0,
     stevenewald: 0,
+    gebrido: 0,
   };
 
   // Loop to store data of each query
